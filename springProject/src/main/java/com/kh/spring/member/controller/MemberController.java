@@ -1,20 +1,38 @@
 package com.kh.spring.member.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.kh.spring.member.model.service.MemberService;
+import com.kh.spring.member.model.service.MemberServiceImpl;
 import com.kh.spring.member.model.vo.Member;
 
 //@Component // 객체(컴포넌트)를 나타내는 일반적인 타입으로 bean 등록 역할을 함
 @Controller // 프레젠테이션 레이어, 웹 애플리케이션에서 전달된 요청 응답을 처리하는 클래스 + bean 등록
 @RequestMapping("/member/*")
+@SessionAttributes({"loginMember"}) // Model에 추가된 데이터 중 key 값이 해당 어노테이션에 적혀있는 값과 일치하는 데이터를 session scope로 이동
 public class MemberController {
+	
+	// Spring 이전에는 service를 컨트롤러 내에서 공용으로 사용하기 위하여
+	// 필드 또는 최상단 부분에 service 객체를 생성했지만
+	//private MemberService service = new MemberServiceImpl();
+	
+	// Spring에서는 객체 생명 주기를 Spring Container가 관리할 수 있도록 함
+	// == bean으로 등록하여 IOC를 통해 제어
+	
+	// @Autowired : 빈 스캐닝(component-scan)을 통해 등록된 bean 중 알맞은 bean을 해당 변수에 의존성 주입(DI)을 진행함
+	@Autowired
+	private MemberService service;
 
 	/** 로그인 화면 전환용 Controller
 	 * @return viewName
@@ -95,23 +113,34 @@ public class MemberController {
 	
 	// ***** 5. @ModelAttribute 어노테이션 생략
 	@RequestMapping("loginAction")
-	public String loginAction(Member inputMember) {
-		System.out.println(inputMember);
+	public String loginAction(Member inputMember, Model model /*HttpSession session*/) {
+		// inputMember -> memberId, memberPwd
+		//System.out.println(inputMember);
+		
+		// 비즈니스 로직 수행 후 결과 반환받기
+		Member loginMember = service.loginAction(inputMember);
+		System.out.println(loginMember); // 결과 확인용
+		
+		//session.setAttribute("loginMember", loginMember);
+		
+		// Model : 데이터를 맵 형식(K : V) 형태로 담아서 전달하는 용도의 객체
+		// Model 객체는 기본적으로 request scope 이지만
+		// 클래스 위쪽에 작성된 @SessionAttributes를 이용하면 session scope로 변경됨
+		
+		if(loginMember != null){ // 로그인 성공 시
+			model.addAttribute("loginMember", loginMember);
+		}
 		
 		return "redirect:/";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+

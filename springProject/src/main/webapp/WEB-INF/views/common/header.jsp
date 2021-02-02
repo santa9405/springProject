@@ -118,7 +118,7 @@
             		<%-- 로그인이 되어있는 경우 --%>
             		<c:otherwise>
 		                <li class="nav-item">
-		                	<a class="nav-link" href="#" style="display:inline">회원명</a>
+		                	<a class="nav-link" href="#" style="display:inline">${loginMember.memberName}</a>
 		                	
 		                </li>
 		                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
