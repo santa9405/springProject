@@ -41,7 +41,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<!-- component-scan : 지정된 패키지에 있는 @Component와 그 구체화 요소(@Controller 등)를 스캔하여 bean으로 등록하는 태그 
+	<!-- component-scan : 지정된 패키지에 있는 @Component와 그 구체화 요소(@Controller, @Service, @Repository)를 스캔하여 bean으로 등록하는 태그 
 		bean으로 등록 됐다 == 스프링 컨테이너에 의해서 생성된 객체 == 스프링 컨테이너가 제어할 수 있는 객체 == IOC(제어의 역전)
 		bean으로 등록된 객체는 개발자가 별도로 생성하지 않아도 스프링 컨테이너에 의해서 필요한 곳에 의존적으로 주입 == DI(의존성 주입)
 	-->

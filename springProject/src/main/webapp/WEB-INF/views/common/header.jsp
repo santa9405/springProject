@@ -92,13 +92,15 @@
 				 title : "${swalTitle}",
 				 text : "${swalText}"});
 		</script>
-		<c:remove var="msg"/>
+		<%-- <c:remove var="swalIcon"/>
+		<c:remove var="swalTitle"/>
+		<c:remove var="swalText"/> --%>
 	</c:if>
 
 
 	<!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="${contextPath }">
+        <a class="navbar-brand js-scroll-trigger" href="${contextPath}">
             <span class="d-block d-lg-none">Spring Project</span>
             <span class="d-none d-lg-block">
             	<%-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${contextPath}/resources/images/logo-1.png" alt="" /> --%>
@@ -121,7 +123,7 @@
 		                	<a class="nav-link" href="#" style="display:inline">${loginMember.memberName}</a>
 		                	
 		                </li>
-		                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+		                <li class="nav-item"><a class="nav-link" href="${contextPath}/member/logout">Logout</a></li>
             		</c:otherwise>
             	</c:choose>
             	
