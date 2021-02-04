@@ -113,14 +113,14 @@
             
             	<c:choose>
             		<%-- 로그인이 되어있지 않은 경우 --%>
-            		<c:when test="${empty sessionScope.loginMember }">
+            		<c:when test="${empty sessionScope.loginMember}">
 		                <li class="nav-item"><a class="nav-link" href="${contextPath}/member/login">Login</a></li>
             		</c:when>
             		
             		<%-- 로그인이 되어있는 경우 --%>
             		<c:otherwise>
 		                <li class="nav-item">
-		                	<a class="nav-link" href="#" style="display:inline">${loginMember.memberName}</a>
+		                	<a class="nav-link" href="${contextPath}/member2/mypage" style="display:inline">${loginMember.memberName}</a>
 		                	
 		                </li>
 		                <li class="nav-item"><a class="nav-link" href="${contextPath}/member/logout">Logout</a></li>

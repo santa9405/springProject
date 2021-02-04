@@ -22,9 +22,20 @@
   		<result property="memberGrade" column="MEMBER_GRADE"/>
   </resultMap>
   
+  <!-- id 중복 체크 -->
   <select id="idDupCheck" parameterType="string" resultType="_int">
   	SELECT COUNT(*) FROM MEMBER 
   	WHERE MEMBER_ID = #{memberId}
   	AND MEMBER_STATUS = 'Y'
   </select>
+  
+  <!-- 회원 가입 -->
+  <insert id="signUp" parameterType="Member">
+  	INSERT INTO MEMBER
+  	VALUES(SEQ_MNO.NEXTVAL, #{memberId}, #{memberPwd},
+  				#{memberName}, #{memberPhone}, #{memberEmail},
+  				#{memberAddress}, #{memberInterest},
+  				DEFAULT, DEFAULT, DEFAULT)
+  </insert>
+  
 </mapper>

@@ -20,7 +20,11 @@
 		<!-- 실제 root-context.xml의 경로 
 			classpath : 프로젝트의 소스폴더로 등록된 폴더의 경로
 		-->
-		<param-value>classpath:spring/root-context.xml</param-value>
+		<param-value>
+			classpath:spring/root-context.xml
+			classpath:spring/spring-security.xml
+		</param-value>
+		
 	</context-param>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
