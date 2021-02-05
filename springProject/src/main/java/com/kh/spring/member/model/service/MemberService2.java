@@ -1,5 +1,7 @@
 package com.kh.spring.member.model.service;
 
+import java.util.Map;
+
 import com.kh.spring.member.model.vo.Member;
 
 public interface MemberService2 {
@@ -19,5 +21,19 @@ public interface MemberService2 {
 	 * @return result
 	 */
 	public abstract int signUp(Member signUpMember);
+
+
+	/** 회원 정보 수정 Service
+	 * @param updateMember
+	 * @return result
+	 */
+	public abstract int updateAction(Member updateMember);
+
+
+	/** 비밀번호 수정 Service
+	 * @param map
+	 * @return
+	 */
+	public abstract int updatePwd(Map<String, Object> map);
 
 }

@@ -36,19 +36,22 @@ public class MemberServiceImpl implements MemberService {
 		// DB에 저장된 비밀번호
 		//$2a$10$/MPJ5m2NqZDoDWALSg/jyueMrpAKBIgf0P.uSCoUZux4rt7.FjRpK
 		
-		// 비밀번호가 같을 때
-		if(enc.matches(inputMember.getMemberPwd(), // 입력받은 평문 비밀번호
-						loginMember.getMemberPwd())) { // DB에 저장된 암호화 비밀번호
+		if(loginMember != null) {
 			
-			// DB에서 조회된 회원정보를 반환하면 되지만
-			// 비밀번호는 null 값으로 변경해서 내보냄.
-			loginMember.setMemberPwd(null);
-			
-		}else { // 비밀번호가 다를 때
-			
-			// 로그인이 실패한 모양을 만들어 줌
-			loginMember = null;
-			
+			// 비밀번호가 같을 때
+			if(enc.matches(inputMember.getMemberPwd(), // 입력받은 평문 비밀번호
+							loginMember.getMemberPwd())) { // DB에 저장된 암호화 비밀번호
+				
+				// DB에서 조회된 회원정보를 반환하면 되지만
+				// 비밀번호는 null 값으로 변경해서 내보냄.
+				loginMember.setMemberPwd(null);
+				
+			}else { // 비밀번호가 다를 때
+				
+				// 로그인이 실패한 모양을 만들어 줌
+				loginMember = null;
+
+			}
 		}
 		
 		return loginMember;

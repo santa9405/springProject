@@ -62,11 +62,11 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 							<!-- 전화번호1 -->
 							<div class="col-md-3">
 								<select class="custom-select" id="phone1" name="phone1">
-									<option>010</option>
-									<option>011</option>
-									<option>016</option>
-									<option>017</option>
-									<option>019</option>
+									<option   <c:if test="${phone[0] == '010'}">selected</c:if>   >010</option>
+									<option   <c:if test="${phone[0] == '011'}">selected</c:if>   >011</option>
+									<option   <c:if test="${phone[0] == '016'}">selected</c:if>   >016</option>
+									<option   <c:if test="${phone[0] == '017'}">selected</c:if>   >017</option>
+									<option   <c:if test="${phone[0] == '019'}">selected</c:if>   >019</option>
 								</select>
 							</div>
 
@@ -264,13 +264,13 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 		
 		
 		//***************** 전화번호 첫 번째 자리 선택  ***********************
-		(function(){
+		/* (function(){
 			$("#phone1 > option").each(function(index, item){
 				if($(item).text() == "${phone[0]}"){
 					$(item).prop("selected", true);
 				}
 			})
-		})();
+		})(); */
 		
 		//******************** 관심 분야 체크  ***************************
 		(function(){
