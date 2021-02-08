@@ -36,4 +36,18 @@ public interface MemberService2 {
 	 */
 	public abstract int updatePwd(Map<String, Object> map);
 
+
+	/** 회원 탈퇴 Service
+	 * @param map
+	 * @return result
+	 */
+	/*public abstract int updateStatus(Map<String, Object> map);*/
+
+
+	/** 회원 탈퇴 Service2
+	 * @param loginMember
+	 * @return
+	 */
+	public abstract int deleteMember(Member loginMember);
+
 }

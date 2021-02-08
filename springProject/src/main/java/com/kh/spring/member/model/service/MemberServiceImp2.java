@@ -118,6 +118,55 @@ public class MemberServiceImp2 implements MemberService2 {
 		
 		return result;
 	}
+
+	// 회원 탈퇴 Service 구현
+	/*@Transactional(rollbackFor = SQLException.class)
+	@Override
+	public int updateStatus(Map<String, Object> map) {
+		// 1. 입력한 비밀번호와 로그인한 비밀번호가 일치하는지 확인
+		String savePwd = dao.selectPwd((int)map.get("memberNo"));
+		
+		// 결과 저장용 변수 선언
+		int result = 0;
+		
+		if(savePwd != null) {
+			
+			// 비밀번호 확인
+			if(enc.matches( (String)map.get("checkPwd"), savePwd)) {
+				
+				// 비밀번호가 일치할 경우 회원탈퇴 진행
+				result = dao.updateStatus(map);
+			}
+		}
+		
+		return result;
+	}*/
+
+	// 회원 탈퇴 Service 구현
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int deleteMember(Member loginMember) {
+		
+		// 1) 입력받은 비밀번호가 맞는지 확인
+		//	--> bcrypt 암호화를 사용하였기 때문에
+		//		DB에서 회원 번호를 조건으로 하여 비밀번호를 조회해온 후
+		//		matches() 메소드를 이용하여 비교
+		String savePwd = dao.selectPwd(loginMember.getMemberNo());
+		
+		int result = 0; // 결과 저장용 변수
+		
+		if(savePwd != null) { // 비밀번호 조회 성공 시
+			if(enc.matches( loginMember.getMemberPwd(), savePwd)) {
+				
+				// 2) 입력받은 비밀번호와, 저장된 비밀번호가 같을 경우
+				//	     회원 탈퇴 DAO 메소드 호출
+				result = dao.deleteMember(loginMember.getMemberNo());
+			}
+			
+		}
+		
+		return result;
+	}
 	
 	
 	

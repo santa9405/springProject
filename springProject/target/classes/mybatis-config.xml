@@ -10,11 +10,13 @@
   
   <typeAliases>
   	<typeAlias type="com.kh.spring.member.model.vo.Member" alias="Member" />
+  	<typeAlias type="com.kh.spring.board.model.vo.Board" alias="Board" />
   </typeAliases>
   
   <mappers>
   	<mapper resource="/mappers/member-mapper.xml" />
   	<mapper resource="/mappers/member-mapper2.xml" />
+  	<mapper resource="/mappers/board-mapper.xml" />
   </mappers>
 </configuration>
 

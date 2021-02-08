@@ -62,4 +62,18 @@
   	WHERE MEMBER_NO = #{memberNo}
   </update>
   
+  <!-- 회원 탈퇴 -->
+  <update id="updateStatus" parameterType="map">
+  	UPDATE MEMBER SET
+  	MEMBER_STATUS = 'N'
+  	WHERE MEMBER_NO = #{memberNo}
+  </update>
+  
+  <!-- 회원 탈퇴2 -->
+  <update id="deleteMember" parameterType="_int">
+  	UPDATE MEMBER SET
+  	MEMBER_STATUS = 'N'
+  	WHERE MEMBER_NO = #{memberNo}
+  </update>
+  
 </mapper>

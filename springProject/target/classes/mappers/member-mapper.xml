@@ -10,16 +10,16 @@
 		<id property="memberNo" column="MEMBER_NO"/>
 		
 		<!-- DB의 일반 컬럼들 -->
-   		<result property="memberId" column="MEMBER_ID"/>
-  		<result property="memberPwd" column="MEMBER_PWD"/>
-  		<result property="memberName" column="MEMBER_NM"/>
-  		<result property="memberPhone" column="MEMBER_PHONE"/>
-  		<result property="memberEmail" column="MEMBER_EMAIL"/>
-  		<result property="memberAddress" column="MEMBER_ADDR"/>
-  		<result property="memberInterest" column="MEMBER_INTEREST"/>
-  		<result property="memberEnrollDate" column="MEMBER_ENROLL_DATE"/>
-  		<result property="memberStatus" column="MEMBER_STATUS"/>
-  		<result property="memberGrade" column="MEMBER_GRADE"/>
+ 		<result property="memberId" column="MEMBER_ID"/>
+ 		<result property="memberPwd" column="MEMBER_PWD"/>
+ 		<result property="memberName" column="MEMBER_NM"/>
+ 		<result property="memberPhone" column="MEMBER_PHONE"/>
+ 		<result property="memberEmail" column="MEMBER_EMAIL"/>
+ 		<result property="memberAddress" column="MEMBER_ADDR"/>
+ 		<result property="memberInterest" column="MEMBER_INTEREST"/>
+ 		<result property="memberEnrollDate" column="MEMBER_ENROLL_DATE"/>
+ 		<result property="memberStatus" column="MEMBER_STATUS"/>
+ 		<result property="memberGrade" column="MEMBER_GRADE"/>
   </resultMap>
   
   <!-- login -->

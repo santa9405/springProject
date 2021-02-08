@@ -127,10 +127,10 @@
             		</c:otherwise>
             	</c:choose>
             	
-                <li class="nav-item"><a class="nav-link" href="#">Free Board</a></li>
+                <li class="nav-item"><a class="nav-link" href="${contextPath}/board/list/1">Free Board</a></li>
                 
                 <!-- Summernote Text Editor API를 활용하는 게시판 -->
-                <li class="nav-item"><a class="nav-link" href="#">Information Board</a></li>
+                <li class="nav-item"><a class="nav-link" href="${contextPath}/board/list/2">Information Board</a></li>
             </ul>
         </div>
     </nav>

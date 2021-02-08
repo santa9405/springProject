@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kh.spring.member.model.service.MemberService2;
@@ -178,7 +179,7 @@ public class MemberController2 {
 		// 비밀번호 변경 Service 호출
 		int result = service.updatePwd(map);
 		
-		// 결과에 따른 쟈요청 주소를 저장할 변수
+		// 결과에 따른 재요청 주소를 저장할 변수
 		String returnUrl = null;
 		
 		// 비밀번호 변경 성공 시
@@ -209,18 +210,87 @@ public class MemberController2 {
 	}
 	
 	// 회원 탈퇴 Controller
-	@RequestMapping("updateStatus")
-	public String changeSecession(@RequestParam("memberPwd") String memberPwd,
-								  @RequestParam(value = "agree", required = true) String agree) {
+	/*@RequestMapping("updateStatus")
+	public String changeSecession(@RequestParam("memberPwd") String checkPwd,
+								  @RequestParam(value = "agree", required = true) String agree,
+								  @ModelAttribute(name = "loginMember", binding = false) Member loginMember,
+								  SessionStatus status, RedirectAttributes ra) {
 		
-		// Map을 이용하여 입력받은 비밀번호와 체크한 약관 동의를 하나로 묶어둠
+		// Map을 이용하여 입력받은 비밀번호, 체크한 약관 동의, 세션에 있는 회원 번호를 하나로 묶어둠
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("memberPwd", memberPwd);
+		map.put("checkPwd", checkPwd);
 		map.put("agree", agree);
+		map.put("memberNo", loginMember.getMemberNo());
 		
-		//int result = service.updateStatus(map);
+		int result = service.updateStatus(map);
 		
-		return "member/secession";
+		// 결과에 따른 재요청 주소를 저장할 변수
+		String returnUrl = null;
+		
+		// 회원 탈퇴 성공 시
+		if(result > 0) {
+			// 세션 만료
+			status.setComplete();
+			
+			swalIcon = "success";
+			swalTitle = "회원 탈퇴 성공";
+			
+			// 메인으로 재요청
+			returnUrl = "/";
+			
+		}else {
+			swalIcon = "error";
+			swalTitle = "회원 탈퇴 실패";
+			
+			// 회원탈퇴 화면으로 재요청
+			returnUrl = "secession";
+		}
+		
+		ra.addFlashAttribute("swalIcon", swalIcon);
+		ra.addFlashAttribute("swalTitle", swalTitle);
+		
+		return "redirect:" + returnUrl;
+	}*/
+	
+	// 회원 탈퇴 Controller2
+	@RequestMapping(value = "updateStatus", method = RequestMethod.POST)
+	public String updateStatus(@ModelAttribute("loginMember") Member loginMember,
+							   RedirectAttributes ra, SessionStatus status) {
+		
+		// 회원 번호 필요 == Session에 있는 loginMember에 저장되어 있으므로
+		//	--> @ModelAttribute("loginMember")를 통해서 얻어옴
+		
+		// 입력받은 현재 비밀번호 필요 == parameter로 전달 받음(memberPwd)
+		//	--> @ModelAttribute를 통해 Member 객체에 자동으로 세팅됨
+		
+		// 회원 번호, 현재 비밀번호를 하나의 VO에 담아서 Service로 전달할 예정
+		// --> 이 작업을 별도로 진행하지 않고 @ModelAttribute를 이용하여 진행
+		
+		// 회원 탈퇴 Service 호출
+		int result = service.deleteMember(loginMember);
+		
+		String returnURL = null;
+		
+		if(result > 0) {
+			// 회원 탈퇴 성공 시 세션 만료
+			status.setComplete();
+			
+			swalIcon = "success";
+			swalTitle = "탈퇴되었습니다.";
+			returnURL = "/";
+			
+		}else {
+			swalIcon = "error";
+			swalTitle = "탈퇴 실패";
+			returnURL = "secession"; // 회원  탈퇴 페이지
+		}
+		
+		ra.addFlashAttribute("swalIcon", swalIcon);
+		ra.addFlashAttribute("swalTitle", swalTitle);
+		
+		return "redirect:" + returnURL;
 	}
+	
+	
 	
 }
