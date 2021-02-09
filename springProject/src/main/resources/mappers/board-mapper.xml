@@ -55,4 +55,32 @@
 		READ_COUNT = READ_COUNT + 1
 		WHERE BOARD_NO = #{boardNo}
 	</update>
+	
+	<!-- 다음 게시글 번호 조회 -->
+	<select id="selectNextNo" resultType="_int">
+		SELECT SEQ_BNO.NEXTVAL FROM DUAL
+	</select>
+	
+	<!-- 게시글 삽입 -->
+	<insert id="insertBoard" parameterType="map">
+		INSERT INTO BOARD VALUES
+		( #{boardNo}, #{boardTitle}, #{boardContent},
+			DEFAULT, DEFAULT, DEFAULT, DEFAULT,
+			#{memberNo}, #{categoryCode}, #{boardType} )
+	</insert>
+	
+	<!-- 파일 정보 삽입(List 이용) -->
+	<insert id="insertAttachmentList" parameterType="list">
+       INSERT INTO ATTACHMENT
+       SELECT SEQ_FNO.NEXTVAL, A.* FROM (
+       
+       <foreach collection="list" item="item" separator="UNION ALL">
+          SELECT #{item.filePath} FILE_PATH,
+                    #{item.fileName} FILE_NAME,
+                    #{item.fileLevel} FILE_LEVEL,
+                    #{item.parentBoardNo} PARENT_BOARD_NO
+          FROM DUAL
+       </foreach>
+       )A
+    </insert>
 </mapper>

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kh.spring.board.model.service.BoardService;
@@ -121,15 +124,21 @@ public class BoardController {
 		// boardInsert2.jsp == summernote 적용 방식
 	}
 	
-	// 게시글 등록 Controller
+	// 게시글 등록(+ 파일 업로드) Controller
 	@RequestMapping("{type}/insertAction")
 	public String insertAction(@PathVariable("type") int type,
-							   @ModelAttribute Board board,
-							   @ModelAttribute("loginMember") Member loginMember) {
+			   @ModelAttribute Board board,
+			   @ModelAttribute("loginMember") Member loginMember,
+			   @RequestParam(value="images", required = false) List<MultipartFile> images,
+			   HttpServletRequest request,
+			   RedirectAttributes ra) {
 		
-		//System.out.println("type : " + type);
-		//System.out.println("board : " + board);
-		//System.out.println("loginMember : " + loginMember);
+		// @RequestParam(value="images", required = false) List<MultipartFile> images
+		//	-> <input type="file" name="images"> 태그를 모두 얻어와 images라는 List에 매핑
+		
+//		System.out.println("type : " + type);
+//		System.out.println("board : " + board);
+//		System.out.println("loginMember : " + loginMember);
 		
 		// map을 이용하여 필요한 데이터 모두 담기
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -139,21 +148,45 @@ public class BoardController {
 		map.put("categoryCode", board.getCategoryNm());
 		map.put("boardType", type);
 		
-		// 게시글 삽입 Service 호출
-		int result = service.insertBoard(map);
+		// 파일 업로드 확인
+		/*for(int i=0; i<images.size(); i++) {
+			System.out.println("images[" + i + "] : " + images.get(i).getOriginalFilename());
+		}*/
 		
-		return null;
+		// 파일 저장 경로 설정
+		// HttpServletRequest 객체가 있어야지만 파일 저장 경로를 얻어올 수 있음.
+		//	-> HttpServletRequest 객체는 Controller에서만 사용 가능
+		
+		// 파일이 업로드 되지 않은 부분도 출력되고 있음을 확인
+		// == 모든 input type="file" 태그가 순서대로 넘어오고 있음을 확인
+		// 	--> 넘어오는 순서를 fileLevel로 사용 가능
+		String savePath = request.getSession().getServletContext().getRealPath("resources/uploadImages");
+		
+		//System.out.println(savePath);
+		
+		// 게시글 map, 이미지 images, 저장경로 savePath
+		
+		// 게시글 삽입 Service 호출
+		int result = service.insertBoard(map, images, savePath);
+		
+		String url = null;
+		
+		// 게시글 삽입 결과에 따른 View 연결 처리
+		if(result > 0){
+			swalIcon = "success";
+			swalTitle = "게시글 등록 성공";
+			url = "redirect:" + result;
+		}else {
+			swalIcon = "error";
+			swalTitle = "";
+			url = "redirect:insert";
+		}
+		
+		ra.addFlashAttribute("swalIcon", swalIcon);
+		ra.addFlashAttribute("swalTitle", swalTitle);
+		
+		return url;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

@@ -93,7 +93,16 @@
 				
 
 				<!-- Content -->
-				<div id="board-content">${board.boardContent}</div>
+				<div id="board-content">
+					<%-- ${board.boardContent} --%>
+					
+					<%-- JSTL을 이용한 개행문자 처리 --%>
+					
+					<% pageContext.setAttribute("newLine", "\n"); %>
+					
+					${fn:replace(board.boardContent, newLine, "<br>")}
+					
+				</div>
 
 				<hr>
 				

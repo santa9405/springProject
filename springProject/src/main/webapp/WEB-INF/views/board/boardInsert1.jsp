@@ -27,7 +27,7 @@
 				- application/x-www-form-urlencoded : 모든 문자를 서버로 전송하기 전에 인코딩 (form태그 기본값)
 				- multipart/form-data : 모든 문자를 인코딩 하지 않음.(원본 데이터가 유지되어 이미지, 파일등을 서버로 전송 할 수 있음.) 
 			-->
-			<form action="insertAction" method="post" role="form" onsubmit="return validate();">
+			<form action="insertAction" method="post" enctype="multipart/form-data" role="form" onsubmit="return validate();">
 			<!-- enctype="multipart/form-data" -->
 
 				<div class="mb-2">
@@ -87,10 +87,10 @@
 
 				<!-- 파일 업로드 하는 부분 -->
 				<div id="fileArea">
-					<input type="file" id="img0" name="img0" onchange="LoadImg(this,0)"> 
-					<input type="file" id="img1" name="img1" onchange="LoadImg(this,1)"> 
-					<input type="file" id="img2" name="img2" onchange="LoadImg(this,2)"> 
-					<input type="file" id="img3" name="img3" onchange="LoadImg(this,3)">
+					<input type="file" id="img0" name="images" onchange="LoadImg(this,0)"> 
+					<input type="file" id="img1" name="images" onchange="LoadImg(this,1)"> 
+					<input type="file" id="img2" name="images" onchange="LoadImg(this,2)"> 
+					<input type="file" id="img3" name="images" onchange="LoadImg(this,3)">
 				</div>
 
 				<div class="form-group">

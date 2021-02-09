@@ -1,12 +1,14 @@
 package com.kh.spring.board.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.RowBounds;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.kh.spring.board.model.vo.Attachment;
 import com.kh.spring.board.model.vo.Board;
 import com.kh.spring.board.model.vo.PageInfo;
 
@@ -58,6 +60,32 @@ public class BoardDAO {
 	 */
 	public int increaseReadCount(int boardNo) {
 		return sqlSession.update("boardMapper.increaseReadCount", boardNo);
+	}
+
+
+	/** 다음 게시글 번호 얻어오기 DAO
+	 * @return boardNo
+	 */
+	public int selectNextNo() {
+		return sqlSession.selectOne("boardMapper.selectNextNo");
+	}
+
+
+	/** 게시글 삽입 DAO
+	 * @param map
+	 * @return result
+	 */
+	public int insertBoard(Map<String, Object> map) {
+		return sqlSession.insert("boardMapper.insertBoard", map);
+	}
+
+
+	/** 파일 정보 삽입 DAO
+	 * @param uploadImages
+	 * @return result(성공한 행의 개수)
+	 */
+	public int insertAttachmentList(List<Attachment> uploadImages) {
+		return sqlSession.insert("boardMapper.insertAttachmentList", uploadImages);
 	}
 	
 }
