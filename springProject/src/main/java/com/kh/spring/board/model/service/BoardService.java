@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.kh.spring.board.model.vo.Attachment;
 import com.kh.spring.board.model.vo.Board;
 import com.kh.spring.board.model.vo.PageInfo;
 
@@ -22,6 +23,12 @@ public interface BoardService {
 	 * @return bList
 	 */
 	public abstract List<Board> selectList(PageInfo pInfo);
+	
+	/** 썸네일 목록 조회 Service
+	 * @param bList
+	 * @return thList
+	 */
+	public abstract List<Attachment> selectThumbnailList(List<Board> bList);
 
 	/** 게시글 상세 조회 Service
 	 * @param boardNo
@@ -29,6 +36,12 @@ public interface BoardService {
 	 * @return board
 	 */
 	public abstract Board selectBoard(int boardNo, int type);
+	
+	/** 게시글에 포함된 이미지 목록 조회 Service
+	 * @param boardNo
+	 * @return attachmentList
+	 */
+	public abstract List<Attachment> selectAttachmentList(int boardNo);
 
 	/** 게시글 등록(+ 파일 업로드) Service
 	 * @param map
@@ -37,6 +50,14 @@ public interface BoardService {
 	 * @return
 	 */
 	public abstract int insertBoard(Map<String, Object> map, List<MultipartFile> images, String savePath);
-	
+
+	/** 게시글 수정 Service
+	 * @param updateBoard
+	 * @param images
+	 * @param savePath
+	 * @param deleteImages
+	 * @return result
+	 */
+	public abstract int updateBoard(Board updateBoard, List<MultipartFile> images, String savePath, boolean[] deleteImages);
 
 }

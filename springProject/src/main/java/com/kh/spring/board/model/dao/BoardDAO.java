@@ -44,6 +44,13 @@ public class BoardDAO {
 		return sqlSession.selectList("boardMapper.selectList", pInfo.getBoardType(), rowBounds);
 	}
 
+	/** 썸네일 목록 조회 DAO
+	 * @param bList
+	 * @return thList
+	 */
+	public List<Attachment> selectThumbnailList(List<Board> bList) {
+		return sqlSession.selectList("boardMapper.selectThumbnailList", bList);
+	}
 
 	/** 게시글 상세 조회 DAO
 	 * @param temp
@@ -52,8 +59,8 @@ public class BoardDAO {
 	public Board selectBoard(Board temp) {
 		return sqlSession.selectOne("boardMapper.selectBoard", temp);
 	}
-
-
+	
+	
 	/** 게시글 조회 수 증가 DAO
 	 * @param boardNo
 	 * @return result
@@ -62,7 +69,16 @@ public class BoardDAO {
 		return sqlSession.update("boardMapper.increaseReadCount", boardNo);
 	}
 
+	
+	/** 게시글에 포함된 이미지 목록 조회 DAO
+	 * @param boardNo
+	 * @return attachmentList
+	 */
+	public List<Attachment> selectAttachmentList(int boardNo) {
+		return sqlSession.selectList("boardMapper.selectAttachmentList", boardNo);
+	}
 
+	
 	/** 다음 게시글 번호 얻어오기 DAO
 	 * @return boardNo
 	 */
@@ -87,5 +103,31 @@ public class BoardDAO {
 	public int insertAttachmentList(List<Attachment> uploadImages) {
 		return sqlSession.insert("boardMapper.insertAttachmentList", uploadImages);
 	}
+
+
+	/** 게시글 수정 DAO
+	 * @param updateBoard
+	 * @return result
+	 */
+	public int updateBoard(Board updateBoard) {
+		return sqlSession.update("boardMapper.updateBoard", updateBoard);
+	}
+
+
+	/** 파일 정보 수정 DAO
+	 * @param at
+	 * @return result
+	 */
+	public int updateAttachment(Attachment at) {
+		return sqlSession.update("boardMapper.updateAttachment", at);
+	}
 	
+	/** 파일 정보 삽입 DAO
+	 * @param at
+	 * @return result
+	 */
+	public int insertAttachment(Attachment at) {
+		return sqlSession.update("boardMapper.insertAttachment", at);
+	}
+
 }

@@ -1,5 +1,6 @@
 package com.kh.spring.board.controller;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kh.spring.board.model.service.BoardService;
+import com.kh.spring.board.model.vo.Attachment;
 import com.kh.spring.board.model.vo.Board;
 import com.kh.spring.board.model.vo.PageInfo;
 import com.kh.spring.member.model.vo.Member;
@@ -57,11 +59,19 @@ public class BoardController {
 		//System.out.println(pInfo);
 		
 		// 2) 게시글 목록 조회
-		List<Board> bList = service.selectList(pInfo); 
+		List<Board> bList = service.selectList(pInfo);
 		
 		/*for(Board b : bList) {
 			System.out.println(b);
 		}*/
+		
+		if(bList != null) { // 게시글 목록 조회성공 시
+			List<Attachment> thumbnailList = service.selectThumbnailList(bList);
+			
+			if(thumbnailList != null) {
+				model.addAttribute("thList", thumbnailList);
+			}
+		}
 		
 		// 게시글 목록, 페이징 처리 정보를 request scope로 세팅 후 sorward 진행
 		model.addAttribute("bList", bList);
@@ -97,6 +107,15 @@ public class BoardController {
 		String url = null;
 		
 		if(board != null) { // 상세 조회 성공 시
+			
+			// 상세조회 성공한 게시물의 이미지 목록을 조회하는 Service 호출
+			List<Attachment> attachmentList = service.selectAttachmentList(boardNo);
+			
+			// 조회된 이미지 목록이 있을 경우
+			if(attachmentList != null && !attachmentList.isEmpty()) {
+				model.addAttribute("attachmentList", attachmentList);
+			}
+			
 			model.addAttribute("board", board);
 			url = "board/boardView";
 		}else {
@@ -176,6 +195,10 @@ public class BoardController {
 			swalIcon = "success";
 			swalTitle = "게시글 등록 성공";
 			url = "redirect:" + result;
+			
+			// 새로 작성한 게시글 상세 조회 시 목록으로 버튼 경로 지정하기
+			request.getSession().setAttribute("returnListURL", "../list/" + type);
+			
 		}else {
 			swalIcon = "error";
 			swalTitle = "";
@@ -187,6 +210,75 @@ public class BoardController {
 		
 		return url;
 		
+	}
+	
+	/* @PathVariable, Query String 각각 언제 써야 되는가?
+	 * 
+	 * @PathVariable : 식별 용도로 사용
+	 * 
+	 * Query String : 주소 마지막에 k=v형태로 파라미터를 전달하는 문자열
+	 * 		-> 필터링, 정렬 등 */
+	
+	// 게시글 수정 화면 전환용 Controller
+	@RequestMapping("{type}/{boardNo}/update")
+	public String update(@PathVariable("boardNo") int boardNo, 
+						 @PathVariable("type") int type, Model model) {
+		
+		// 1) 게시글 상세 조회
+		Board board = service.selectBoard(boardNo, type);
+		
+		// 2) 해당 게시글에 포함된 이미지 목록 조회
+		if(board != null) {
+			
+			List<Attachment> attachmentList = service.selectAttachmentList(boardNo);
+			model.addAttribute("attachmentList", attachmentList);
+			// null 값이 전달되어도 EL이 빈 문자열로 처리해줌
+		}
+		
+		model.addAttribute("board", board);
+		
+		return "board/boardUpdate";
+	}
+	
+	// 게시글 수정 Controller
+	@RequestMapping("{type}/{boardNo}/updateAction")
+	public String updateAction(@PathVariable("boardNo") int boardNo,
+							   @ModelAttribute Board updateBoard,
+							   Model model, RedirectAttributes ra,
+							   HttpServletRequest request,
+			@RequestParam("deleteImages") boolean[] deleteImages,
+			@RequestParam(value="images", required = false) List<MultipartFile> images) {
+		
+		/*System.out.println(Arrays.toString(deleteImages));
+		for(MultipartFile m : images) {
+			System.out.println(m.getOriginalFilename());
+		}*/
+		
+		// boardNo를 updateBoard에 세팅
+		updateBoard.setBoardNo(boardNo);
+		
+		// 파일 저장 경로 얻어오기
+		String savePath = request.getSession().getServletContext().getRealPath("resources/uploadImages"); 
+		
+		// 파일 수정 Service 호출	   수정된 게시글 정보, 새롭게 업로드되거나 변경된 파일 정보 전체, 파일 저장 경로, 삭제된 파일레벨을 가지고 있는 배열
+		int result = service.updateBoard(updateBoard, images, savePath, deleteImages);
+		
+		String url = null;
+		
+		if(result > 0) {
+			swalIcon = "success";
+			swalTitle = "게시글 수정 성공";
+			url = "redirect:../" + boardNo;
+		}else {
+			swalIcon = "error";
+			swalTitle = "게시글 수정 실패";
+			url = "redirect:" + request.getHeader("referer");
+		}
+		
+		ra.addFlashAttribute("swalIcon", swalIcon);
+		ra.addFlashAttribute("swalTitle", swalTitle);
+		
+		return url;
 	}
 	
 }

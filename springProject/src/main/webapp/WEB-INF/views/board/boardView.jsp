@@ -76,21 +76,28 @@
 
 				
 				<!-- 이미지 부분 -->
-                <c:if test="${!empty files }">
+        <c:if test="${!empty attachmentList}">
                 
 					<div class="carousel slide m-3" id="carousel-325626">
-	                    
-	                    <div class="carousel-inner boardImgArea">
-	                    
-		                    
-	                    </div> 
-	                    
-	                    <a class="carousel-control-prev" href="#carousel-325626" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-325626" data-slide="next">
-	                    <span class="carousel-control-next-icon"></span> 
-	                    <span class="sr-only">Next</span></a>
+              <div class="carousel-inner boardImgArea">
+              
+              <c:forEach var="at" items="${attachmentList}" varStatus="vs">
+           				<c:set var="src" value="${contextPath}${at.filePath}/${at.fileName}"/>
+           		
+	                <div class="carousel-item <c:if test="${vs.index == 0}"> active</c:if>">
+	                    <img class="d-block w-100 boardImg" src="${src}" />
+	                    <input type="hidden" value="${at.fileNo}">
 	                </div>
-                </c:if>
-				
+               </c:forEach>
+              
+              </div> 
+              
+              <a class="carousel-control-prev" href="#carousel-325626" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-325626" data-slide="next">
+              <span class="carousel-control-next-icon"></span> 
+              <span class="sr-only">Next</span></a>
+          </div>
+         </c:if>
+
 
 				<!-- Content -->
 				<div id="board-content">
@@ -111,13 +118,11 @@
 					
 						<%-- 북마크나 주소로 인한 직접 접근 시 목록으로 버튼 경로 지정 --%>
 						<c:if test="${empty sessionScope.returnListURL}">
-							<c:set var="listUrl" value="../list/${board.boardCode}" scope="session"/>
+							<c:set var="returnListURL" value="../list/${board.boardCode}" scope="session"/>
 						</c:if>
 						<a class="btn btn-success" href="${sessionScope.returnListURL}">목록으로</a>
 	                	
-	                	<c:url var="updateUrl" value="#">
-	                		<c:param name="cp" value="${param.cp}" />
-	                	</c:url>
+	                	<c:url var="updateUrl" value="${board.boardNo}/update" />
 	                	
 	                	<!-- 로그인된 회원이 글 작성자인 경우 -->
 						<c:if test="${(loginMember != null) && (board.memberId == loginMember.memberId)}">

@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.kh.spring.board.model.dao.BoardDAO;
 import com.kh.spring.board.model.exception.InsertAttachmentFailException;
+import com.kh.spring.board.model.exception.UpdateAttachmentFailException;
 import com.kh.spring.board.model.vo.Attachment;
 import com.kh.spring.board.model.vo.Board;
 import com.kh.spring.board.model.vo.PageInfo;
@@ -40,6 +41,12 @@ public class BoardServiceImpl implements BoardService{
 		return dao.selectList(pInfo);
 	}
 
+	// 썸네일 목록 조회 Service 구현
+	@Override
+	public List<Attachment> selectThumbnailList(List<Board> bList) {
+		return dao.selectThumbnailList(bList);
+	}
+
 	// 게시글 상세 조회 Service 구현
 	@Override
 	public Board selectBoard(int boardNo, int type) {
@@ -62,7 +69,15 @@ public class BoardServiceImpl implements BoardService{
 		}
 		
 		return board;
+	} // selectBoard method end
+	
+
+	// 게시글에 포함된 이미지 목록 조회 Service 구현
+	@Override
+	public List<Attachment> selectAttachmentList(int boardNo) {
+		return dao.selectAttachmentList(boardNo);
 	}
+	
 
 	// 게시글 삽입 Service 구현
 	@Transactional(rollbackFor = Exception.class)
@@ -208,5 +223,119 @@ public class BoardServiceImpl implements BoardService{
 		
 		return date + str + ext;
 	}
-	
+
+	// 게시글 수정 Service 구현
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int updateBoard(Board updateBoard, List<MultipartFile> images, String savePath, boolean[] deleteImages) {
+		
+		// 1) 게시글 수정
+		// 제목, 내용 크로스사이트 스크립팅 방지 처리
+		updateBoard.setBoardTitle( replaceParameter( updateBoard.getBoardTitle() ) );
+		updateBoard.setBoardContent( replaceParameter( updateBoard.getBoardContent() ) );
+		
+		// 게시글 수정 DAO 호출
+		int result = dao.updateBoard(updateBoard);
+		
+		// 2) 이미지 수정
+		if( result > 0 ) {
+			
+			// 수정 전 업로드 되어있던 파일 정보를 얻어옴
+			//	-> 새롭게 삽입 또는 수정되는 파일과 비교하기 위함
+			List<Attachment> oldFiles = dao.selectAttachmentList(updateBoard.getBoardNo());
+			
+			// 새로 업로드된 파일 정보를 담을 리스트
+			List<Attachment> uploadImages = new ArrayList<Attachment>();
+			
+			// 삭제 되어야 할 파일 정보를 담은 리스트
+			List<Attachment> removeFileList = new ArrayList<Attachment>();
+			
+			// DB에 저장할 웹상 이미지 접근 경로
+			String filePath = "/resources/uploadImages";
+			
+			// 새롭게 업로드된 파일 정보를 가지고 있는 images에 반복 접근
+			for(int i=0; i<images.size(); i++) {
+				
+				// 업로드된 이미지가 있을 경우
+				if( !images.get(i).getOriginalFilename().equals("") ) {
+					
+					// 파일명 변경
+					String fileName = rename(images.get(i).getOriginalFilename());
+					
+					// Attachment 객체 생성
+					Attachment at = new Attachment(filePath, fileName, i, updateBoard.getBoardNo());
+					
+					uploadImages.add(at); // 업로드 이미지 리스트에 추가
+					
+					// true : update 진행
+					// false : insert 진행
+					boolean flag = false;
+					
+					// 새로운 파일 정보와 이전 파일 정보를 비교하는 반복문
+					for(Attachment old : oldFiles) {
+						
+						if(old.getFileLevel() == i ) {
+							// 현재 접근한 이전 파일의 레벨이
+							// 새롭게 업로드한 파일의 레벨과 같은 경우
+							// == 같은 레벨에 새로운 이미지 업로드 --> update 진행
+							flag = true;
+							
+							// DB에서 파일 번호가 일치하는 행의 내용을 수정하기 위해 파일번호를 얻어옴
+							at.setFileNo( old.getFileNo() );
+							
+							removeFileList.add(old); // 삭제할 파일 목록에 이전 파일 정보 추가
+						}
+					}
+					
+					
+					// flag 값에 따른 insert / update 제어
+					if(flag) { // true : update 진행
+						result = dao.updateAttachment(at);
+						
+					}else { // false : insert 진행
+						result = dao.insertAttachment(at);
+					}
+					
+					// insert 또는 update 실패 시 rollback 수행
+					// -> 예외를 발생 시켜서 @Transactional을 이용해 수행
+					if(result <= 0) {
+						throw new UpdateAttachmentFailException("파일 정보 수정 실패");
+					}
+					
+				} else { // 업로드된 이미지가 없을 경우
+					
+					
+				}
+			} // images 반복 접근 for문 종료
+			
+			// uploadImages == 업로드된 파일 정보 --> 서버에 파일 저장
+			// removeFileList == 제거해야될 파일 정보 --> 서버에서 파일 삭제
+			
+			// 수정되거나 새롭게 삽입된 이미지를 서버에 저장하기 위해 transferTo() 수행
+			if(result > 0) {
+				for(int i=0 ; i<uploadImages.size(); i++) {
+					
+					try {
+						images.get(uploadImages.get(i).getFileLevel())
+							.transferTo(new File(savePath + "/" + uploadImages.get(i).getFileName()) );                                             
+					}catch (Exception e) {
+						e.printStackTrace();
+						throw new UpdateAttachmentFailException("파일 정보 수정 실패");
+					}
+				}
+			}
+			
+			// ------------------------------------------
+			// 이전 파일 서버에서 삭제하는 코드 
+			for(Attachment removeFile : removeFileList) {
+				File tmp = new File(savePath + "/" + removeFile.getFileName());
+				tmp.delete();
+			}
+			// ------------------------------------------
+			
+		}
+		
+		return result;
+	}
+
 }
