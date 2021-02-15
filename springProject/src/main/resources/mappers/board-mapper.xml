@@ -134,5 +134,11 @@
     	INSERT INTO ATTACHMENT
     	VALUES(SEQ_FNO.NEXTVAL, #{filePath}, #{fileName}, #{fileLevel}, #{parentBoardNo})
     </insert>
+    
+    <!-- 파일 정보 삭제   -->
+     <delete id="deleteAttachment" parameterType="_int">
+        DELETE FROM ATTACHMENT
+        WHERE FILE_NO = #{fileNo}
+     </delete>
  
 </mapper>

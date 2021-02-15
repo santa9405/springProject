@@ -130,4 +130,13 @@ public class BoardDAO {
 		return sqlSession.update("boardMapper.insertAttachment", at);
 	}
 
+
+	 /** 파일 정보 삭제 DAO
+    * @param fileNo
+    * @return result
+    */
+   public int deleteAttachment(int fileNo) {
+      return sqlSession.delete("boardMapper.deleteAttachment", fileNo);
+   }
+
 }
