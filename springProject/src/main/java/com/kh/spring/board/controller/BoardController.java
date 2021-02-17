@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.google.gson.Gson;
 import com.kh.spring.board.model.service.BoardService;
 import com.kh.spring.board.model.vo.Attachment;
 import com.kh.spring.board.model.vo.Board;
@@ -65,7 +67,7 @@ public class BoardController {
 			System.out.println(b);
 		}*/
 		
-		if(bList != null) { // 게시글 목록 조회성공 시
+		if(bList != null && !bList.isEmpty()) { // 게시글 목록 조회성공 시
 			List<Attachment> thumbnailList = service.selectThumbnailList(bList);
 			
 			if(thumbnailList != null) {
@@ -179,7 +181,13 @@ public class BoardController {
 		// 파일이 업로드 되지 않은 부분도 출력되고 있음을 확인
 		// == 모든 input type="file" 태그가 순서대로 넘어오고 있음을 확인
 		// 	--> 넘어오는 순서를 fileLevel로 사용 가능
-		String savePath = request.getSession().getServletContext().getRealPath("resources/uploadImages");
+		String savePath = null;
+		
+		if(type == 1) {
+			savePath = request.getSession().getServletContext().getRealPath("resources/uploadImages");
+		}else {
+			savePath = request.getSession().getServletContext().getRealPath("resources/infoImages");
+		}
 		
 		//System.out.println(savePath);
 		
@@ -279,6 +287,23 @@ public class BoardController {
 		ra.addFlashAttribute("swalTitle", swalTitle);
 		
 		return url;
+	}
+	
+	// -------------------------------------------------summernote-----------------------------------------------
+	// summernote에 업로드된 이미지 저장 Controller
+	@ResponseBody // 응답 시 값 자체를 돌려보냄
+	@RequestMapping("{type}/insertImage")
+	public String insertImage(HttpServletRequest request, 
+					@RequestParam(value = "uploadFile") MultipartFile uploadFile) {
+		
+		// 서버에 파일(이미지)을 저장할 폴더 경로 얻어오기
+		String savePath
+		 = request.getSession().getServletContext().getRealPath("resources/infoImages");
+		
+		Attachment at = service.insertImage(uploadFile, savePath);
+		
+		// java -> js로 객체 전달 : JSON
+		return new Gson().toJson(at);
 	}
 	
 }

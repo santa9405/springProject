@@ -116,12 +116,14 @@ public class MemberController {
 
 	// @ModelAttribute == 커맨드 객체
 	/*
-	 * @RequestMapping("loginAction") public String loginAction(@ModelAttribute
-	 * Member inputMember) { System.out.println("memberId : " +
-	 * inputMember.getMemberId()); System.out.println("memberPwd : " +
-	 * inputMember.getMemberPwd());
+	 * @RequestMapping("loginAction") 
+	 * public String loginAction(@ModelAttribute Member inputMember) { 
+	 * System.out.println("memberId : " + inputMember.getMemberId()); 
+	 * System.out.println("memberPwd : " + inputMember.getMemberPwd());
 	 * 
-	 * return "redirect:/"; }
+	 * return "redirect:/"; 
+	 * 
+	 * }
 	 */
 
 	// RedirectAttributes : redirect시 값을 전달하는 용도로 사용할 수 있는 객체

@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -124,8 +126,16 @@ public class BoardServiceImpl implements BoardService{
 				//	--> 파일명 중복 상황을 대비하여 파일명을 변경하는 코드 필요 (rename() 메소드)
 				
 				// DB에 저장할 웹상 접근 주소(filePath)
-				String filePath = "/resources/uploadImages";
+				String filePath = null;
+						
+				if((int)map.get("boardType") == 1) {
+					filePath = "/resources/uploadImages";
+				}else {
+					filePath = "/resources/infoImages";
+				}
 				
+				
+						
 				// for문을 이용하여 파일 정보가 담긴 images를 반복접근
 				//	-> 업로드된 파일이 있을 경우에만 uploadImages 리스트에 추가
 				for(int i=0; i<images.size(); i++) {
@@ -150,6 +160,39 @@ public class BoardServiceImpl implements BoardService{
 					System.out.println(at);
 				}*/
 				
+				// ------------------------------------- summernote -------------------------------------
+				
+				// 게시판 타입이 2번(summernote를 이용한 게시글 작성)일 경우
+				// boardContent 내부에 업로드된 이미지 정보(filePath, fileName)이 들어있음
+				// -> boardContent에서 <img> 태그만을 골라내어
+				//	  img 태그의 src 속성 값을 추출 후 filePath, fileName을 얻어냄
+				if((int)map.get("boardType") == 2) {
+					Pattern pattern = Pattern.compile("<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>"); //img 태그 src 추출 정규표현식
+					
+					// SummerNote에 작성된 내용 중 img태그의 src속성의 값을 검사하여 매칭되는 값을 Matcher객체에 저장함.
+					Matcher matcher = pattern.matcher((String)map.get("boardContent"));     
+					 
+					String fileName = null; // 파일명 변환 후 저장할 임시 참조 변수
+					String src = null; // src 속성값을 저장할 임시 참조 변수
+					
+					// matcher.find() : Matcher 객체에 저장된 값(검사를 통해 매칭된 src 속성 값)에 반복 접근하여 값이 있을 경우 true 
+					while(matcher.find()){
+						src = matcher.group(1); // 매칭된 src 속성값을  Matcher 객체에서 꺼내서 src에 저장 
+						
+						System.out.println(src);
+						
+						filePath = src.substring(src.indexOf("/", 2), src.lastIndexOf("/")); // 파일명을 제외한 경로만 별도로 저장.
+						
+						fileName = src.substring(src.lastIndexOf("/")+ 1); // 업로드된 파일명만 잘라서 별도로 저장.
+						
+						// Attachment 객체를 이용하여 DB에 파일 정보를 저장
+						Attachment at = new Attachment(filePath, fileName, 1, boardNo);
+						uploadImages.add(at);
+					}
+				}
+				
+				// ------------------------------------- summernote -------------------------------------
+				
 				if(!uploadImages.isEmpty()) { // 업로드 된 이미지가 있을 경우
 					// 파일 정보 삽입 DAO 호출
 					result = dao.insertAttachmentList(uploadImages);
@@ -162,7 +205,15 @@ public class BoardServiceImpl implements BoardService{
 						// MultipartFile.transferTo
 						//	-> MultipartFile 객체에 저장된 파일을
 						//	       지정된 경로에 실제 파일의 형태로 변환하여 저장하는 메소드
-						for(int i=0; i<uploadImages.size(); i++) {
+						
+						int size = 0;
+						if( (int)map.get("boardType") == 1 ) {
+							size = uploadImages.size();
+						}else if( !images.get(0).getOriginalFilename().equals("") ){
+							size = images.size();
+						}
+						
+						for(int i=0; i<size; i++) {
 							
 							// uploadImages : 업로드된 이미지 정보를 담고있는 Attachment가 모여있는 List
 							// images : input type="file" 태그의 정보를 담은 MultipartFile이 모여있는 List
@@ -189,9 +240,12 @@ public class BoardServiceImpl implements BoardService{
 					}else { // 파일 정보를 DB에 삽입하는데 실패했을 때
 						throw new InsertAttachmentFailException("파일 정보 DB 삽입 실패");
 					}
+				}else { // 업로드된 이미지가 없을 경우
+					result = boardNo;
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -325,10 +379,7 @@ public class BoardServiceImpl implements BoardService{
 		                        }
 		                     }
 		                  }
-		                  
-		                  
 		               }
-		               
 		            }
 			} // images 반복 접근 for문 종료
 			
@@ -360,6 +411,34 @@ public class BoardServiceImpl implements BoardService{
 		}
 		
 		return result;
+	}
+
+	// summernote 업로드 이미지 저장 Service 구현
+	@Override
+	public Attachment insertImage(MultipartFile uploadFile, String savePath) {
+		
+		// 파일명 변경
+		String fileName = rename(uploadFile.getOriginalFilename());
+		
+		// 웹상 접근 주소
+		String filePath = "/resources/infoImages/";
+		
+		// 돌려 보내줄 파일 정보를 Attachment 객체에 담아서 전달.
+		Attachment at = new Attachment();
+		at.setFilePath(filePath);
+		at.setFileName(fileName);
+		
+		// 서버에 파일 저장(transferTo())
+		try {
+			uploadFile.transferTo( new File( savePath + "/" + fileName ) );
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			
+			throw new InsertAttachmentFailException("summernote 파일 업로드 실패");
+		}
+		
+		return at;
 	}
 
 }

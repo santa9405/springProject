@@ -245,12 +245,6 @@
 				location.href = boardViewURL;
 		});
 		
-		
-		
-		
-		
-		
-		
 	</script>
 </body>
 </html>
