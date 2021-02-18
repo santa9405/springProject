@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#summernote').summernote({
-        width : 800,    // 에디터 넓이
+        width : 1070,    // 에디터 넓이
         height : 600,   // 에디터 높이
         lang : 'ko-KR',  // 언어 : 한국어
 

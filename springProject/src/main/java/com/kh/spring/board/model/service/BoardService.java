@@ -67,4 +67,10 @@ public interface BoardService {
 	 */
 	public abstract Attachment insertImage(MultipartFile uploadFile, String savePath);
 
+	
+	/** DB에 저장된 파일 중 최근 3일 이내에 저장된 파일을 제외 후 조회 Service
+	 * @return dbFileList
+	 */
+	public abstract List<String> selectDBFileList();
+
 }

@@ -136,9 +136,21 @@
     </insert>
     
     <!-- 파일 정보 삭제   -->
-     <delete id="deleteAttachment" parameterType="_int">
-        DELETE FROM ATTACHMENT
-        WHERE FILE_NO = #{fileNo}
-     </delete>
+    <delete id="deleteAttachment" parameterType="_int">
+       DELETE FROM ATTACHMENT
+       WHERE FILE_NO = #{fileNo}
+    </delete>
+    
+    <!-- DB에 저장된 파일 중 최근 3일 이내에 저장된 파일을 제외 후 조회 -->
+    <!-- 
+    	<![CDATA[ 부등호포함 SQL구문 ]]> : markUp 언어에서  <, > 태그 기호를 태그가 아닌 글자로 인식하게 하는 구문
+     -->
+ 		<select id="selectDBFileList" resultType="string">
+ 	 		 SELECT FILE_NAME
+			 FROM ATTACHMENT
+			 <![CDATA[
+			 WHERE TO_DATE( SUBSTR(FILE_NAME, 0, 8), 'YYMMDDHH24' ) < SYSDATE - 3
+			 ]]>
+ 		</select>
  
 </mapper>
