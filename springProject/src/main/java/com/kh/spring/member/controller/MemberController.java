@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -41,7 +43,10 @@ public class MemberController {
 	// 주입(DI)을 진행함
 	@Autowired
 	private MemberService service;
-
+	
+	// Logger 객체 생성 : 로그를 작성할 수 있는 객체
+	private Logger logger = LoggerFactory.getLogger(MemberController.class);
+	
 	/**
 	 * 로그인 화면 전환용 Controller
 	 * 
@@ -49,6 +54,12 @@ public class MemberController {
 	 */
 	@RequestMapping("login")
 	public String loginView() {
+		
+		logger.debug("로그인 화면으로 전환됨(debug)");
+		logger.info("로그인 화면으로 전환됨(info)");
+		
+		
+		
 		return "member/login";
 	}
 
