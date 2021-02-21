@@ -51,9 +51,6 @@ public class SchedulingTest {
 	 *  
 	 *  매일 자정(0시)
 	 *  cron = "0 0 0 * * *"
-	 *  
-	 *  
-	 * 
 	 */
 	
 	public static int num = 0;
