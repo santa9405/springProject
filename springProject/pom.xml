@@ -110,12 +110,21 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 				
-		<!-- AspectJ -->
+		<!-- AspectJ : AOP 기능을 사용하기 위한 문법이 담긴 모듈 -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
 		</dependency>	
+		
+		
+		<!-- AspectJ Weaver : aspect의 정보를 바탕으로 aspect를 구성한 코드를 생성하는데 필요한 유틸리티 프로그램-->
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+       <groupId>org.aspectj</groupId>
+       <artifactId>aspectjweaver</artifactId>
+       <version>${org.aspectj-version}</version>
+    </dependency>
 		
 		<!-- Logging -->
 		<dependency>
