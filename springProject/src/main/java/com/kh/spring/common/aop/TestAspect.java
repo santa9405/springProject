@@ -21,7 +21,7 @@ public class TestAspect {
 
 	// 접근제한자 상관 없이 com.kh.spring 하위에 있는 클래스 중
 	// 클래스명에 Impl이 들어가는 클래스의 모든 메소드가 수행될 경우
-	@Before("execution(* com.kh.spring..*Impl*.*(..))")
+	//@Before("execution(* com.kh.spring..*Impl*.*(..))")
 	public void serviceStart() {
 		logger.debug("----------------Service 수행----------------");
 	}

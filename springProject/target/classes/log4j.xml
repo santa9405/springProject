@@ -15,7 +15,7 @@
   <appender name="myDailyRollingFile" class="org.apache.log4j.DailyRollingFileAppender">
 
      <!-- 로그 파일 생성 위치(C드라이브 하위 절대경로로 지정됨) -->
-      <param name="file" value="C:/Users/user1/git/springProject/springProject/src/main/webapp/resources/logs/logfile.log"/>
+      <param name="file" value="C:/Users/tnejd/git/springProject/springProject/src/main/webapp/resources/logs/logfile.log"/>
       
       <!-- 이전 내용에 이어서 작성 -->
       <param name="Append" value="true"/>
