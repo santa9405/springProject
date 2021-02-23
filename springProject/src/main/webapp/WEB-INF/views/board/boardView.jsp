@@ -136,6 +136,7 @@
 			<hr>
 
 			<!-- 댓글 부분 -->
+			<jsp:include page="reply.jsp" />
 			
 		</div>
 	</div>
