@@ -23,8 +23,8 @@ public class ImageDeleteScheduling {
 	@Autowired
 	private BoardService boardService;
 	
-	//@Scheduled(cron = "0 0 * * * *")
-	@Scheduled(cron = "0 * * * * *") // 테스트는 매 분마다 진행
+	@Scheduled(cron = "0 0 * * * *")
+	//@Scheduled(cron = "0 * * * * *") // 테스트는 매 분마다 진행
 	public void deleteImage() {
 		// 최근 3일 이내 저장된 파일을 제외한 
 		// 서버에는 있지만 DB에는 존재하지 않는 이미지 파일을

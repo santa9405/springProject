@@ -21,7 +21,7 @@ public class AroundAspect {
 	private Logger logger = LoggerFactory.getLogger(AroundAspect.class);
 	
 	// Pointcut : 공통 관심사가 수행되는 지점
-	// "excution(* com.kh.spring..*Impl*.*(..))"
+	// "execution(* com.kh.spring..*Impl*.*(..))"
 	//		[접근제한자]
 	// *  : 모든
 	// .. : 하위 모든 패키지 or 0개 이상의 매개변수

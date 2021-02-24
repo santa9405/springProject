@@ -13,7 +13,7 @@ public class TestAspect {
 	private Logger logger = LoggerFactory.getLogger(TestAspect.class);
  
 	// Pointcut : 공통 관심사가 수행되는 시점
-	// "excution(* com.kh.spring..*Impl*.*(..))"
+	// "execution(* com.kh.spring..*Impl*.*(..))"
 	//       [접근제한자]
 	
 	// * : 모든

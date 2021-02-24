@@ -49,6 +49,11 @@ public class ReplyServiceImpl implements ReplyService{
 		// 개행문자 처리 \n -> <br>
 		map.put("replyContent", ( (String)map.get("replyContent")).replaceAll("\n", "<br>") );
 		
+		//reply.setReplyContent( replaceParameter(reply.getReplyContent()) );
+		//reply.setReplyContent( reply.getReplyContent().replaceAll("\n", "<br>") );
+		
+		// return dao.updateReply(reply);
+		
 		return dao.updateReply(map);
 	}
 	
@@ -63,5 +68,25 @@ public class ReplyServiceImpl implements ReplyService{
 		}
 		
 		return result;
+	}
+
+	// 댓글 삭제 Service 구현
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int deleteReply(int replyNo) {
+		return dao.deleteReply(replyNo);
+	}
+
+	// 답글 삽입 Service 구현
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int insertChildReply(Map<String, Object> map) {
+		// 크로스사이트 스크립트 방지 처리
+		map.put("replyContent", replaceParameter( (String)map.get("replyContent")) );
+		
+		// 개행문자 변경 처리
+		map.put("replyContent", ( (String)map.get("replyContent")).replaceAll("\n", "<br>") );
+		
+		return dao.insertChildReply(map);
 	}
 }

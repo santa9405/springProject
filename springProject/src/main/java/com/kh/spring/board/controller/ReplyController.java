@@ -65,7 +65,13 @@ public class ReplyController {
 	// 댓글 수정 Controller
 	@RequestMapping("updateReply/{replyNo}")
 	public int updateReply(@PathVariable("replyNo") int replyNo,
-						   @RequestParam("replyContent") String replyContent) {
+						   @RequestParam("replyContent") String replyContent
+						   //@ModelAttribute Reply reply
+						   ) {
+		
+		//Reply.setReplyNo(replyNo);
+		// 커맨드 객체 updateReply를 이용하여 replyContent를 전달받고,
+		// @PathVariable을 통해 얻어온 replyNo를 커맨드객체에 세팅하여 재활용
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("replyNo", replyNo);
@@ -73,7 +79,38 @@ public class ReplyController {
 		
 		int result = service.updateReply(map);
 		
+		//return service.updateReply(reply);
+		
 		return result;
 	}
+	
+	// 댓글 삭제 Controller
+	@RequestMapping("deleteReply/{replyNo}")
+	public int deleteReply(@PathVariable("replyNo") int replyNo) {
+		
+		return service.deleteReply(replyNo);
+	}
+	
+	// 답글 삽입 Controller
+	@RequestMapping("insertChildReply/{parentBoardNo}")
+	public int insertChildReply(@PathVariable("parentBoardNo") int parentBoardNo,
+								int parentReplyNo, String replyContent, int replyWriter) {
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("parentBoardNo", parentBoardNo);
+		map.put("parentReplyNo", parentReplyNo);
+		map.put("replyContent", replyContent);
+		map.put("replyWriter", replyWriter);
+		
+		return service.insertChildReply(map);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

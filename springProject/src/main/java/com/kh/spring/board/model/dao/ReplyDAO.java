@@ -36,12 +36,24 @@ public class ReplyDAO {
 	 * @return result
 	 */
 	public int updateReply(Map<String, Object> map) {
+		//return sqlSession.update("replyMapper.updateReply", reply);
 		return sqlSession.update("replyMapper.updateReply", map);
 	}
-	
-	
-	
-	
-	
+
+	/** 댓글 삭제 DAO
+	 * @param replyNo
+	 * @return result
+	 */
+	public int deleteReply(int replyNo) {
+		return sqlSession.update("replyMapper.deleteReply", replyNo);
+	}
+
+	/** 답글 삽입 DAO
+	 * @param map
+	 * @return result
+	 */
+	public int insertChildReply(Map<String, Object> map) {
+		return sqlSession.insert("replyMapper.insertChildReply", map);
+	}
 	
 }
