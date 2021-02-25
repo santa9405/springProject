@@ -1,1298 +1,315 @@
-21-02-24 09:05:23 [INFO] Root WebApplicationContext: initialization started
-21-02-24 09:05:26 [INFO] Root WebApplicationContext initialized in 2960 ms
-21-02-24 09:05:26 [INFO] Initializing Servlet 'appServlet'
-21-02-24 09:05:30 [INFO] Completed initialization in 4026 ms
-21-02-24 09:05:45 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 09:05:45 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 09:05:48 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 09:05:48 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 09:05:48 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:05:50 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 09:05:50 [DEBUG] [Running Time] : 1886ms
-
-21-02-24 09:05:56 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 09:05:56 [DEBUG] [parameter] : [1, 1]
-21-02-24 09:05:56 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:05:56 [DEBUG] [id] : user04
-21-02-24 09:05:56 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 09:05:56 [DEBUG] [Running Time] : 30ms
-
-21-02-24 09:05:57 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 09:05:57 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 09:05:57 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:05:57 [DEBUG] [id] : user04
-21-02-24 09:05:57 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=66, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 09:05:57 [DEBUG] [Running Time] : 10ms
-
-21-02-24 09:05:57 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 09:05:57 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=66, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 09:05:57 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:05:57 [DEBUG] [id] : user04
-21-02-24 09:05:57 [DEBUG] [Return Value] : []
-21-02-24 09:05:57 [DEBUG] [Running Time] : 100ms
-
-21-02-24 09:06:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:06:00 [DEBUG] [parameter] : []
-21-02-24 09:06:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:06:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:06:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:06:00 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:06:00 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:06:00 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:06:00 [DEBUG] [id] : user04
-21-02-24 09:06:00 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=67, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:06:00 [DEBUG] [Running Time] : 19ms
-
-21-02-24 09:06:00 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:06:00 [DEBUG] [parameter] : [508]
-21-02-24 09:06:00 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:06:00 [DEBUG] [id] : user04
-21-02-24 09:06:00 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:06:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:06:01 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:06:01 [DEBUG] [parameter] : [508]
-21-02-24 09:06:01 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:06:01 [DEBUG] [id] : user04
-21-02-24 09:06:01 [DEBUG] [Return Value] : [Reply [replyNo=2, replyContent=댓글<br>수정 테스트<br>&lt;h3&gt;수정&lt;/h3&gt;, replyCreateDate=2021-02-23 11:43:38.0, replyModifyDate=2021-02-23 14:18:53.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=2, replyDepth=0], Reply [replyNo=1, replyContent=댓글 수정 테스트, replyCreateDate=2021-02-23 11:43:13.0, replyModifyDate=2021-02-23 14:18:10.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=1, replyDepth=0]]
-21-02-24 09:06:01 [DEBUG] [Running Time] : 4ms
-
-21-02-24 09:07:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:07:00 [DEBUG] [parameter] : []
-21-02-24 09:07:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:07:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:07:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:08:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:08:00 [DEBUG] [parameter] : []
-21-02-24 09:08:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:08:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:08:00 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:09:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:09:00 [DEBUG] [parameter] : []
-21-02-24 09:09:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:09:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:09:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:10:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:10:00 [DEBUG] [parameter] : []
-21-02-24 09:10:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:10:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:10:00 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:11:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:11:00 [DEBUG] [parameter] : []
-21-02-24 09:11:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:11:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:11:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:12:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:12:00 [DEBUG] [parameter] : []
-21-02-24 09:12:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:12:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:12:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:13:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:13:00 [DEBUG] [parameter] : []
-21-02-24 09:13:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:13:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:13:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:14:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:14:00 [DEBUG] [parameter] : []
-21-02-24 09:14:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:14:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:14:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:15:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:15:00 [DEBUG] [parameter] : []
-21-02-24 09:15:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:15:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:15:00 [DEBUG] [Running Time] : 4ms
-
-21-02-24 09:15:17 [INFO] Root WebApplicationContext: initialization started
-21-02-24 09:15:19 [INFO] Root WebApplicationContext initialized in 2442 ms
-21-02-24 09:15:19 [INFO] Initializing Servlet 'appServlet'
-21-02-24 09:15:23 [INFO] Completed initialization in 3217 ms
-21-02-24 09:20:45 [INFO] Root WebApplicationContext: initialization started
-21-02-24 09:20:47 [INFO] Root WebApplicationContext initialized in 2697 ms
-21-02-24 09:20:48 [INFO] Initializing Servlet 'appServlet'
-21-02-24 09:20:51 [INFO] Completed initialization in 3284 ms
-21-02-24 09:21:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:21:00 [DEBUG] [parameter] : []
-21-02-24 09:21:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:21:01 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:21:01 [DEBUG] [Running Time] : 1540ms
-
-21-02-24 09:21:19 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 09:21:19 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 09:21:21 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 09:21:21 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 09:21:21 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:21 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 09:21:21 [DEBUG] [Running Time] : 81ms
-
-21-02-24 09:21:24 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 09:21:24 [DEBUG] [parameter] : [1, 1]
-21-02-24 09:21:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:24 [DEBUG] [id] : user04
-21-02-24 09:21:24 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 09:21:24 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:21:24 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 09:21:24 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 09:21:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:24 [DEBUG] [id] : user04
-21-02-24 09:21:24 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=67, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 09:21:24 [DEBUG] [Running Time] : 11ms
-
-21-02-24 09:21:24 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 09:21:24 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=67, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 09:21:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:24 [DEBUG] [id] : user04
-21-02-24 09:21:24 [DEBUG] [Return Value] : []
-21-02-24 09:21:24 [DEBUG] [Running Time] : 87ms
-
-21-02-24 09:21:25 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:21:25 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:21:25 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:25 [DEBUG] [id] : user04
-21-02-24 09:21:25 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=68, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:21:25 [DEBUG] [Running Time] : 15ms
-
-21-02-24 09:21:25 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:21:25 [DEBUG] [parameter] : [508]
-21-02-24 09:21:25 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:25 [DEBUG] [id] : user04
-21-02-24 09:21:25 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:21:25 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:21:26 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:21:26 [DEBUG] [parameter] : [508]
-21-02-24 09:21:26 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:26 [DEBUG] [id] : user04
-21-02-24 09:21:26 [DEBUG] [Return Value] : [Reply [replyNo=2, replyContent=댓글<br>수정 테스트<br>&lt;h3&gt;수정&lt;/h3&gt;, replyCreateDate=2021-02-23 11:43:38.0, replyModifyDate=2021-02-23 14:18:53.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=2, replyDepth=0], Reply [replyNo=1, replyContent=댓글 수정 테스트, replyCreateDate=2021-02-23 11:43:13.0, replyModifyDate=2021-02-23 14:18:10.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=1, replyDepth=0]]
-21-02-24 09:21:26 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:21:29 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:21:29 [DEBUG] [parameter] : [1]
-21-02-24 09:21:29 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:29 [DEBUG] [id] : user04
-21-02-24 09:21:29 [DEBUG] [Return Value] : 1
-21-02-24 09:21:29 [DEBUG] [Running Time] : 12ms
-
-21-02-24 09:21:33 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:21:33 [DEBUG] [parameter] : [1]
-21-02-24 09:21:33 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:21:33 [DEBUG] [id] : user04
-21-02-24 09:21:33 [DEBUG] [Return Value] : 1
-21-02-24 09:21:33 [DEBUG] [Running Time] : 0ms
-
-21-02-24 09:22:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:22:00 [DEBUG] [parameter] : []
-21-02-24 09:22:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:22:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:22:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:22:09 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:22:09 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:22:09 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:22:09 [DEBUG] [id] : user04
-21-02-24 09:22:09 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=69, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:22:09 [DEBUG] [Running Time] : 13ms
-
-21-02-24 09:22:09 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:22:09 [DEBUG] [parameter] : [508]
-21-02-24 09:22:09 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:22:09 [DEBUG] [id] : user04
-21-02-24 09:22:09 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:22:09 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:22:09 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:22:09 [DEBUG] [parameter] : [508]
-21-02-24 09:22:09 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:22:09 [DEBUG] [id] : user04
-21-02-24 09:22:09 [DEBUG] [Return Value] : [Reply [replyNo=2, replyContent=댓글<br>수정 테스트<br>&lt;h3&gt;수정&lt;/h3&gt;, replyCreateDate=2021-02-23 11:43:38.0, replyModifyDate=2021-02-23 14:18:53.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=2, replyDepth=0]]
-21-02-24 09:22:09 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:23:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:23:00 [DEBUG] [parameter] : []
-21-02-24 09:23:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:23:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:23:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:24:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:24:00 [DEBUG] [parameter] : []
-21-02-24 09:24:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:24:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:24:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:24:40 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:24:40 [DEBUG] [parameter] : [2]
-21-02-24 09:24:40 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:24:40 [DEBUG] [id] : user04
-21-02-24 09:24:40 [DEBUG] [Return Value] : 1
-21-02-24 09:24:40 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:24:45 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:24:45 [DEBUG] [parameter] : [2]
-21-02-24 09:24:45 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:24:45 [DEBUG] [id] : user04
-21-02-24 09:24:45 [DEBUG] [Return Value] : 1
-21-02-24 09:24:45 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:24:48 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:24:48 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:24:48 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:24:48 [DEBUG] [id] : user04
-21-02-24 09:24:48 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=70, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:24:48 [DEBUG] [Running Time] : 7ms
-
-21-02-24 09:24:48 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:24:48 [DEBUG] [parameter] : [508]
-21-02-24 09:24:48 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:24:48 [DEBUG] [id] : user04
-21-02-24 09:24:48 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:24:48 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:24:48 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:24:48 [DEBUG] [parameter] : [508]
-21-02-24 09:24:48 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:24:48 [DEBUG] [id] : user04
-21-02-24 09:24:48 [DEBUG] [Return Value] : []
-21-02-24 09:24:48 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:25:00 [DEBUG] [parameter] : []
-21-02-24 09:25:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:25:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:25:00 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=71, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 15ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : [Reply [replyNo=2, replyContent=댓글<br>수정 테스트<br>&lt;h3&gt;수정&lt;/h3&gt;, replyCreateDate=2021-02-23 11:43:38.0, replyModifyDate=2021-02-23 14:18:53.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=2, replyDepth=0], Reply [replyNo=1, replyContent=댓글 수정 테스트, replyCreateDate=2021-02-23 11:43:13.0, replyModifyDate=2021-02-23 14:18:10.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=1, replyDepth=0]]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=72, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 15ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:04 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:25:04 [DEBUG] [parameter] : [508]
-21-02-24 09:25:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:04 [DEBUG] [id] : user04
-21-02-24 09:25:04 [DEBUG] [Return Value] : [Reply [replyNo=2, replyContent=댓글<br>수정 테스트<br>&lt;h3&gt;수정&lt;/h3&gt;, replyCreateDate=2021-02-23 11:43:38.0, replyModifyDate=2021-02-23 14:18:53.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=2, replyDepth=0], Reply [replyNo=1, replyContent=댓글 수정 테스트, replyCreateDate=2021-02-23 11:43:13.0, replyModifyDate=2021-02-23 14:18:10.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=1, replyDepth=0]]
-21-02-24 09:25:04 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:08 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:25:08 [DEBUG] [parameter] : [2]
-21-02-24 09:25:08 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:08 [DEBUG] [id] : user04
-21-02-24 09:25:08 [DEBUG] [Return Value] : 1
-21-02-24 09:25:08 [DEBUG] [Running Time] : 0ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=73, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 18ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=74, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=75, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 17ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=76, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 4ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=77, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 15ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508, 1]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=78, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 16ms
-
-21-02-24 09:25:50 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 09:25:50 [DEBUG] [parameter] : [508]
-21-02-24 09:25:50 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:50 [DEBUG] [id] : user04
-21-02-24 09:25:50 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 09:25:50 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:25:51 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:25:51 [DEBUG] [parameter] : [508]
-21-02-24 09:25:51 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:51 [DEBUG] [id] : user04
-21-02-24 09:25:51 [DEBUG] [Return Value] : [Reply [replyNo=1, replyContent=댓글 수정 테스트, replyCreateDate=2021-02-23 11:43:13.0, replyModifyDate=2021-02-23 14:18:10.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=1, replyDepth=0]]
-21-02-24 09:25:51 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:25:54 [DEBUG] [Start] : ReplyServiceImpl - deleteReply()
-21-02-24 09:25:54 [DEBUG] [parameter] : [1]
-21-02-24 09:25:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:54 [DEBUG] [id] : user04
-21-02-24 09:25:54 [DEBUG] [Return Value] : 1
-21-02-24 09:25:54 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:25:54 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 09:25:54 [DEBUG] [parameter] : [508]
-21-02-24 09:25:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 09:25:54 [DEBUG] [id] : user04
-21-02-24 09:25:54 [DEBUG] [Return Value] : []
-21-02-24 09:25:54 [DEBUG] [Running Time] : 1ms
-
-21-02-24 09:26:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:26:00 [DEBUG] [parameter] : []
-21-02-24 09:26:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:26:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:26:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:27:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:27:00 [DEBUG] [parameter] : []
-21-02-24 09:27:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:27:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:27:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:28:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:28:00 [DEBUG] [parameter] : []
-21-02-24 09:28:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:28:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:28:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:29:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:29:00 [DEBUG] [parameter] : []
-21-02-24 09:29:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:29:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:29:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:30:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:30:00 [DEBUG] [parameter] : []
-21-02-24 09:30:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:30:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:30:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:31:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:31:00 [DEBUG] [parameter] : []
-21-02-24 09:31:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:31:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:31:00 [DEBUG] [Running Time] : 0ms
-
-21-02-24 09:32:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:32:00 [DEBUG] [parameter] : []
-21-02-24 09:32:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:32:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:32:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:33:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:33:00 [DEBUG] [parameter] : []
-21-02-24 09:33:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:33:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:33:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:34:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:34:00 [DEBUG] [parameter] : []
-21-02-24 09:34:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:34:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:34:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 09:35:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:35:00 [DEBUG] [parameter] : []
-21-02-24 09:35:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:35:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:35:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:36:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:36:00 [DEBUG] [parameter] : []
-21-02-24 09:36:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:36:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:36:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 09:37:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 09:37:00 [DEBUG] [parameter] : []
-21-02-24 09:37:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 09:37:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 09:37:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:33:05 [INFO] Root WebApplicationContext: initialization started
-21-02-24 10:33:08 [INFO] Root WebApplicationContext initialized in 2909 ms
-21-02-24 10:33:08 [INFO] Initializing Servlet 'appServlet'
-21-02-24 10:33:12 [INFO] Completed initialization in 3735 ms
-21-02-24 10:33:50 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 10:33:50 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 10:33:52 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 10:33:52 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 10:33:52 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:33:54 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 10:33:54 [DEBUG] [Running Time] : 1721ms
-
-21-02-24 10:34:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:34:00 [DEBUG] [parameter] : []
-21-02-24 10:34:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:34:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:34:00 [DEBUG] [Running Time] : 4ms
-
-21-02-24 10:34:21 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 10:34:21 [DEBUG] [parameter] : [1, 1]
-21-02-24 10:34:21 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:21 [DEBUG] [id] : user04
-21-02-24 10:34:21 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 10:34:21 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:34:21 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 10:34:21 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 10:34:21 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:21 [DEBUG] [id] : user04
-21-02-24 10:34:21 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=78, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 10:34:21 [DEBUG] [Running Time] : 9ms
-
-21-02-24 10:34:21 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 10:34:21 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=78, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 10:34:21 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:21 [DEBUG] [id] : user04
-21-02-24 10:34:21 [DEBUG] [Return Value] : []
-21-02-24 10:34:21 [DEBUG] [Running Time] : 94ms
-
-21-02-24 10:34:22 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 10:34:22 [DEBUG] [parameter] : [508, 1]
-21-02-24 10:34:22 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:22 [DEBUG] [id] : user04
-21-02-24 10:34:22 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=79, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 10:34:22 [DEBUG] [Running Time] : 10ms
-
-21-02-24 10:34:22 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 10:34:22 [DEBUG] [parameter] : [508]
-21-02-24 10:34:22 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:22 [DEBUG] [id] : user04
-21-02-24 10:34:22 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 10:34:22 [DEBUG] [Running Time] : 1ms
-
-21-02-24 10:34:23 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 10:34:23 [DEBUG] [parameter] : [508]
-21-02-24 10:34:23 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:23 [DEBUG] [id] : user04
-21-02-24 10:34:23 [DEBUG] [Return Value] : []
-21-02-24 10:34:23 [DEBUG] [Running Time] : 3ms
-
-21-02-24 10:34:30 [DEBUG] [Start] : ReplyServiceImpl - insertReply()
-21-02-24 10:34:30 [DEBUG] [parameter] : [{parentBoardNo=508, replyContent=댓글 테스트, replyWriter=6}]
-21-02-24 10:34:30 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:30 [DEBUG] [id] : user04
-21-02-24 10:34:30 [DEBUG] [Return Value] : 1
-21-02-24 10:34:30 [DEBUG] [Running Time] : 1ms
-
-21-02-24 10:34:30 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 10:34:30 [DEBUG] [parameter] : [508]
-21-02-24 10:34:30 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:34:30 [DEBUG] [id] : user04
-21-02-24 10:34:30 [DEBUG] [Return Value] : [Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 10:34:30 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:35:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:35:00 [DEBUG] [parameter] : []
-21-02-24 10:35:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:35:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:35:00 [DEBUG] [Running Time] : 4ms
-
-21-02-24 10:36:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:36:00 [DEBUG] [parameter] : []
-21-02-24 10:36:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:36:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:36:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:42:23 [INFO] Root WebApplicationContext: initialization started
-21-02-24 10:42:25 [INFO] Root WebApplicationContext initialized in 2594 ms
-21-02-24 10:42:26 [INFO] Initializing Servlet 'appServlet'
-21-02-24 10:42:29 [INFO] Completed initialization in 3371 ms
-21-02-24 10:42:37 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 10:42:37 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 10:42:40 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 10:42:40 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 10:42:40 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:41 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 10:42:41 [DEBUG] [Running Time] : 1555ms
-
-21-02-24 10:42:43 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 10:42:43 [DEBUG] [parameter] : [1, 1]
-21-02-24 10:42:43 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:43 [DEBUG] [id] : user04
-21-02-24 10:42:43 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 10:42:43 [DEBUG] [Running Time] : 4ms
-
-21-02-24 10:42:43 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 10:42:43 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 10:42:43 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:43 [DEBUG] [id] : user04
-21-02-24 10:42:43 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=79, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 10:42:43 [DEBUG] [Running Time] : 13ms
-
-21-02-24 10:42:43 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 10:42:43 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=79, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 10:42:43 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:43 [DEBUG] [id] : user04
-21-02-24 10:42:44 [DEBUG] [Return Value] : []
-21-02-24 10:42:44 [DEBUG] [Running Time] : 89ms
-
-21-02-24 10:42:44 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 10:42:44 [DEBUG] [parameter] : [508, 1]
-21-02-24 10:42:44 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:44 [DEBUG] [id] : user04
-21-02-24 10:42:44 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=80, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 10:42:44 [DEBUG] [Running Time] : 14ms
-
-21-02-24 10:42:44 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 10:42:44 [DEBUG] [parameter] : [508]
-21-02-24 10:42:44 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:44 [DEBUG] [id] : user04
-21-02-24 10:42:44 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 10:42:44 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:42:45 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 10:42:45 [DEBUG] [parameter] : [508]
-21-02-24 10:42:45 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:42:45 [DEBUG] [id] : user04
-21-02-24 10:42:45 [DEBUG] [Return Value] : [Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 10:42:45 [DEBUG] [Running Time] : 3ms
-
-21-02-24 10:43:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:43:00 [DEBUG] [parameter] : []
-21-02-24 10:43:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:43:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:43:00 [DEBUG] [Running Time] : 4ms
-
-21-02-24 10:43:31 [INFO] Root WebApplicationContext: initialization started
-21-02-24 10:43:34 [INFO] Root WebApplicationContext initialized in 2555 ms
-21-02-24 10:43:34 [INFO] Initializing Servlet 'appServlet'
-21-02-24 10:43:37 [INFO] Completed initialization in 3375 ms
-21-02-24 10:44:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:44:00 [DEBUG] [parameter] : []
-21-02-24 10:44:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:44:01 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:44:01 [DEBUG] [Running Time] : 1690ms
-
-21-02-24 10:48:04 [INFO] Root WebApplicationContext: initialization started
-21-02-24 10:48:06 [INFO] Root WebApplicationContext initialized in 2560 ms
-21-02-24 10:48:06 [INFO] Initializing Servlet 'appServlet'
-21-02-24 10:48:10 [INFO] Completed initialization in 3585 ms
-21-02-24 10:48:18 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 10:48:18 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 10:48:21 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 10:48:21 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 10:48:21 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:22 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 10:48:22 [DEBUG] [Running Time] : 1568ms
-
-21-02-24 10:48:24 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 10:48:24 [DEBUG] [parameter] : [1, 1]
-21-02-24 10:48:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:24 [DEBUG] [id] : user04
-21-02-24 10:48:24 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 10:48:24 [DEBUG] [Running Time] : 3ms
-
-21-02-24 10:48:24 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 10:48:24 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 10:48:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:24 [DEBUG] [id] : user04
-21-02-24 10:48:24 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=80, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 10:48:24 [DEBUG] [Running Time] : 11ms
-
-21-02-24 10:48:24 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 10:48:24 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=80, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 10:48:24 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:24 [DEBUG] [id] : user04
-21-02-24 10:48:24 [DEBUG] [Return Value] : []
-21-02-24 10:48:24 [DEBUG] [Running Time] : 96ms
-
-21-02-24 10:48:25 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 10:48:25 [DEBUG] [parameter] : [508, 1]
-21-02-24 10:48:25 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:25 [DEBUG] [id] : user04
-21-02-24 10:48:25 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=81, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 10:48:25 [DEBUG] [Running Time] : 21ms
-
-21-02-24 10:48:25 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 10:48:25 [DEBUG] [parameter] : [508]
-21-02-24 10:48:25 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:25 [DEBUG] [id] : user04
-21-02-24 10:48:25 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 10:48:25 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:48:26 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 10:48:26 [DEBUG] [parameter] : [508]
-21-02-24 10:48:26 [DEBUG] [ip] : 127.0.0.1
-21-02-24 10:48:26 [DEBUG] [id] : user04
-21-02-24 10:48:26 [DEBUG] [Return Value] : [Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 10:48:26 [DEBUG] [Running Time] : 3ms
-
-21-02-24 10:49:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:49:00 [DEBUG] [parameter] : []
-21-02-24 10:49:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:49:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:49:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 10:50:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:50:00 [DEBUG] [parameter] : []
-21-02-24 10:50:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:50:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:50:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:51:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:51:00 [DEBUG] [parameter] : []
-21-02-24 10:51:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:51:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:51:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:52:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:52:00 [DEBUG] [parameter] : []
-21-02-24 10:52:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:52:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:52:00 [DEBUG] [Running Time] : 1ms
-
-21-02-24 10:53:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:53:00 [DEBUG] [parameter] : []
-21-02-24 10:53:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:53:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:53:00 [DEBUG] [Running Time] : 1ms
-
-21-02-24 10:54:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:54:00 [DEBUG] [parameter] : []
-21-02-24 10:54:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:54:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:54:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:55:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:55:00 [DEBUG] [parameter] : []
-21-02-24 10:55:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:55:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:55:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:56:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:56:00 [DEBUG] [parameter] : []
-21-02-24 10:56:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:56:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:56:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:57:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:57:00 [DEBUG] [parameter] : []
-21-02-24 10:57:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:57:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:57:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:58:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:58:00 [DEBUG] [parameter] : []
-21-02-24 10:58:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:58:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:58:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 10:59:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 10:59:00 [DEBUG] [parameter] : []
-21-02-24 10:59:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 10:59:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 10:59:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 11:00:00 [DEBUG] [parameter] : []
-21-02-24 11:00:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 11:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 11:00:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:01:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 11:01:00 [DEBUG] [parameter] : []
-21-02-24 11:01:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 11:01:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 11:01:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:02:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 11:02:00 [DEBUG] [parameter] : []
-21-02-24 11:02:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 11:02:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 11:02:00 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:09:13 [INFO] Root WebApplicationContext: initialization started
-21-02-24 11:09:16 [INFO] Root WebApplicationContext initialized in 2827 ms
-21-02-24 11:09:16 [INFO] Initializing Servlet 'appServlet'
-21-02-24 11:09:20 [INFO] Completed initialization in 3435 ms
-21-02-24 11:09:59 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 11:09:59 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 11:10:01 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 11:10:01 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 11:10:01 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:03 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 11:10:03 [DEBUG] [Running Time] : 1557ms
-
-21-02-24 11:10:05 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 11:10:05 [DEBUG] [parameter] : [1, 1]
-21-02-24 11:10:05 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:05 [DEBUG] [id] : user04
-21-02-24 11:10:05 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 11:10:05 [DEBUG] [Running Time] : 4ms
-
-21-02-24 11:10:05 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 11:10:05 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 11:10:05 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:05 [DEBUG] [id] : user04
-21-02-24 11:10:05 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=81, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 11:10:05 [DEBUG] [Running Time] : 10ms
-
-21-02-24 11:10:05 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 11:10:05 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=81, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 11:10:05 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:05 [DEBUG] [id] : user04
-21-02-24 11:10:05 [DEBUG] [Return Value] : []
-21-02-24 11:10:05 [DEBUG] [Running Time] : 96ms
-
-21-02-24 11:10:06 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:10:06 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:10:06 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:06 [DEBUG] [id] : user04
-21-02-24 11:10:06 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=82, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:10:06 [DEBUG] [Running Time] : 18ms
-
-21-02-24 11:10:06 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:10:06 [DEBUG] [parameter] : [508]
-21-02-24 11:10:06 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:06 [DEBUG] [id] : user04
-21-02-24 11:10:06 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:10:06 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:10:07 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 11:10:07 [DEBUG] [parameter] : [508]
-21-02-24 11:10:07 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:07 [DEBUG] [id] : user04
-21-02-24 11:10:07 [DEBUG] [Return Value] : [Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 11:10:07 [DEBUG] [Running Time] : 5ms
-
-21-02-24 11:10:13 [DEBUG] [Start] : ReplyServiceImpl - insertReply()
-21-02-24 11:10:13 [DEBUG] [parameter] : [{parentBoardNo=508, replyContent=댓글, replyWriter=6}]
-21-02-24 11:10:13 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:13 [DEBUG] [id] : user04
-21-02-24 11:10:13 [DEBUG] [Return Value] : 1
-21-02-24 11:10:13 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:10:13 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 11:10:13 [DEBUG] [parameter] : [508]
-21-02-24 11:10:13 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:10:13 [DEBUG] [id] : user04
-21-02-24 11:10:13 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 11:10:13 [DEBUG] [Running Time] : 3ms
-
-21-02-24 11:11:37 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:11:37 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:11:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:37 [DEBUG] [id] : user04
-21-02-24 11:11:37 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=83, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:11:37 [DEBUG] [Running Time] : 5ms
-
-21-02-24 11:11:37 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:11:37 [DEBUG] [parameter] : [508]
-21-02-24 11:11:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:37 [DEBUG] [id] : user04
-21-02-24 11:11:37 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:11:37 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:11:37 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:11:37 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:11:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:37 [DEBUG] [id] : user04
-21-02-24 11:11:37 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=84, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:11:37 [DEBUG] [Running Time] : 14ms
-
-21-02-24 11:11:37 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:11:37 [DEBUG] [parameter] : [508]
-21-02-24 11:11:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:37 [DEBUG] [id] : user04
-21-02-24 11:11:37 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:11:37 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:11:38 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:11:38 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:11:38 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:38 [DEBUG] [id] : user04
-21-02-24 11:11:38 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=85, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:11:38 [DEBUG] [Running Time] : 14ms
-
-21-02-24 11:11:38 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:11:38 [DEBUG] [parameter] : [508]
-21-02-24 11:11:38 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:38 [DEBUG] [id] : user04
-21-02-24 11:11:38 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:11:38 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:11:39 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 11:11:39 [DEBUG] [parameter] : [508]
-21-02-24 11:11:39 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:11:39 [DEBUG] [id] : user04
-21-02-24 11:11:39 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 11:11:39 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:30:09 [INFO] Root WebApplicationContext: initialization started
-21-02-24 11:30:12 [INFO] Root WebApplicationContext initialized in 2724 ms
-21-02-24 11:30:12 [INFO] Initializing Servlet 'appServlet'
-21-02-24 11:30:16 [INFO] Completed initialization in 3449 ms
-21-02-24 11:30:24 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 11:30:24 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 11:30:31 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 11:30:31 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 11:30:31 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:33 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 11:30:33 [DEBUG] [Running Time] : 1643ms
-
-21-02-24 11:30:35 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 11:30:35 [DEBUG] [parameter] : [1, 1]
-21-02-24 11:30:35 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:35 [DEBUG] [id] : user04
-21-02-24 11:30:35 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 11:30:35 [DEBUG] [Running Time] : 3ms
-
-21-02-24 11:30:35 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 11:30:35 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 11:30:35 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:35 [DEBUG] [id] : user04
-21-02-24 11:30:35 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=85, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 11:30:35 [DEBUG] [Running Time] : 11ms
-
-21-02-24 11:30:35 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 11:30:35 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=85, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 11:30:35 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:35 [DEBUG] [id] : user04
-21-02-24 11:30:35 [DEBUG] [Return Value] : []
-21-02-24 11:30:35 [DEBUG] [Running Time] : 89ms
-
-21-02-24 11:30:37 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:30:37 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:30:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:37 [DEBUG] [id] : user04
-21-02-24 11:30:37 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=86, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:30:37 [DEBUG] [Running Time] : 18ms
-
-21-02-24 11:30:37 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:30:37 [DEBUG] [parameter] : [508]
-21-02-24 11:30:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:37 [DEBUG] [id] : user04
-21-02-24 11:30:37 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:30:37 [DEBUG] [Running Time] : 2ms
-
-21-02-24 11:30:38 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 11:30:38 [DEBUG] [parameter] : [508]
-21-02-24 11:30:38 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:30:38 [DEBUG] [id] : user04
-21-02-24 11:30:38 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 11:30:38 [DEBUG] [Running Time] : 5ms
-
-21-02-24 11:31:08 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:31:08 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:31:08 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:31:08 [DEBUG] [id] : user04
-21-02-24 11:31:08 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=87, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:31:08 [DEBUG] [Running Time] : 14ms
-
-21-02-24 11:31:08 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:31:08 [DEBUG] [parameter] : [508]
-21-02-24 11:31:08 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:31:08 [DEBUG] [id] : user04
-21-02-24 11:31:08 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:31:08 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:31:08 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 11:31:08 [DEBUG] [parameter] : [508, 1]
-21-02-24 11:31:08 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:31:08 [DEBUG] [id] : user04
-21-02-24 11:31:08 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=88, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 11:31:08 [DEBUG] [Running Time] : 4ms
-
-21-02-24 11:31:08 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 11:31:08 [DEBUG] [parameter] : [508]
-21-02-24 11:31:08 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:31:08 [DEBUG] [id] : user04
-21-02-24 11:31:08 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 11:31:08 [DEBUG] [Running Time] : 1ms
-
-21-02-24 11:31:10 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 11:31:10 [DEBUG] [parameter] : [508]
-21-02-24 11:31:10 [DEBUG] [ip] : 127.0.0.1
-21-02-24 11:31:10 [DEBUG] [id] : user04
-21-02-24 11:31:10 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 11:31:10 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:20:09 [INFO] Root WebApplicationContext: initialization started
-21-02-24 12:20:12 [INFO] Root WebApplicationContext initialized in 2778 ms
-21-02-24 12:20:12 [INFO] Initializing Servlet 'appServlet'
-21-02-24 12:20:15 [INFO] Completed initialization in 3370 ms
-21-02-24 12:20:24 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 12:20:24 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 12:20:30 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 12:20:30 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 12:20:30 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:32 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 12:20:32 [DEBUG] [Running Time] : 1606ms
-
-21-02-24 12:20:34 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 12:20:34 [DEBUG] [parameter] : [1, 1]
-21-02-24 12:20:34 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:34 [DEBUG] [id] : user04
-21-02-24 12:20:34 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 12:20:34 [DEBUG] [Running Time] : 4ms
-
-21-02-24 12:20:34 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 12:20:34 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 12:20:34 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:34 [DEBUG] [id] : user04
-21-02-24 12:20:34 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=88, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 12:20:34 [DEBUG] [Running Time] : 11ms
-
-21-02-24 12:20:34 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 12:20:34 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=88, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 12:20:34 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:34 [DEBUG] [id] : user04
-21-02-24 12:20:34 [DEBUG] [Return Value] : []
-21-02-24 12:20:34 [DEBUG] [Running Time] : 97ms
-
-21-02-24 12:20:36 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 12:20:36 [DEBUG] [parameter] : [508, 1]
-21-02-24 12:20:36 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:36 [DEBUG] [id] : user04
-21-02-24 12:20:36 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=89, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 12:20:36 [DEBUG] [Running Time] : 20ms
-
-21-02-24 12:20:36 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 12:20:36 [DEBUG] [parameter] : [508]
-21-02-24 12:20:36 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:36 [DEBUG] [id] : user04
-21-02-24 12:20:36 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 12:20:36 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:20:37 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:20:37 [DEBUG] [parameter] : [508]
-21-02-24 12:20:37 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:37 [DEBUG] [id] : user04
-21-02-24 12:20:37 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 12:20:37 [DEBUG] [Running Time] : 4ms
-
-21-02-24 12:20:54 [DEBUG] [Start] : ReplyServiceImpl - insertChildReply()
-21-02-24 12:20:54 [DEBUG] [parameter] : [{parentBoardNo=508, parentReplyNo=3, replyContent=답글 테스트, replyWriter=6}]
-21-02-24 12:20:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:54 [DEBUG] [id] : user04
-21-02-24 12:20:54 [DEBUG] [Return Value] : 1
-21-02-24 12:20:54 [DEBUG] [Running Time] : 2ms
-
-21-02-24 12:20:54 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:20:54 [DEBUG] [parameter] : [508]
-21-02-24 12:20:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:20:54 [DEBUG] [id] : user04
-21-02-24 12:20:54 [DEBUG] [Return Value] : [Reply [replyNo=5, replyContent=답글 테스트, replyCreateDate=2021-02-24 12:20:54.0, replyModifyDate=2021-02-24 12:20:54.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=1], Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 12:20:54 [DEBUG] [Running Time] : 3ms
-
-21-02-24 12:21:04 [DEBUG] [Start] : ReplyServiceImpl - insertChildReply()
-21-02-24 12:21:04 [DEBUG] [parameter] : [{parentBoardNo=508, parentReplyNo=3, replyContent=답글 테스트2, replyWriter=6}]
-21-02-24 12:21:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:21:04 [DEBUG] [id] : user04
-21-02-24 12:21:04 [DEBUG] [Return Value] : 1
-21-02-24 12:21:04 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:21:04 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:21:04 [DEBUG] [parameter] : [508]
-21-02-24 12:21:04 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:21:04 [DEBUG] [id] : user04
-21-02-24 12:21:04 [DEBUG] [Return Value] : [Reply [replyNo=6, replyContent=답글 테스트2, replyCreateDate=2021-02-24 12:21:04.0, replyModifyDate=2021-02-24 12:21:04.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=1], Reply [replyNo=5, replyContent=답글 테스트, replyCreateDate=2021-02-24 12:20:54.0, replyModifyDate=2021-02-24 12:20:54.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=1], Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0]]
-21-02-24 12:21:04 [DEBUG] [Running Time] : 2ms
-
-21-02-24 12:49:33 [INFO] Root WebApplicationContext: initialization started
-21-02-24 12:49:36 [INFO] Root WebApplicationContext initialized in 2477 ms
-21-02-24 12:49:36 [INFO] Initializing Servlet 'appServlet'
-21-02-24 12:49:39 [INFO] Completed initialization in 3188 ms
-21-02-24 12:49:48 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 12:49:48 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 12:49:51 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 12:49:51 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 12:49:51 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:52 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 12:49:52 [DEBUG] [Running Time] : 1524ms
-
-21-02-24 12:49:54 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 12:49:54 [DEBUG] [parameter] : [1, 1]
-21-02-24 12:49:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:54 [DEBUG] [id] : user04
-21-02-24 12:49:54 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 12:49:54 [DEBUG] [Running Time] : 3ms
-
-21-02-24 12:49:54 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 12:49:54 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 12:49:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:54 [DEBUG] [id] : user04
-21-02-24 12:49:54 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=89, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 12:49:54 [DEBUG] [Running Time] : 12ms
-
-21-02-24 12:49:54 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 12:49:54 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=89, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 12:49:54 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:54 [DEBUG] [id] : user04
-21-02-24 12:49:54 [DEBUG] [Return Value] : []
-21-02-24 12:49:54 [DEBUG] [Running Time] : 101ms
-
-21-02-24 12:49:56 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 12:49:56 [DEBUG] [parameter] : [508, 1]
-21-02-24 12:49:56 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:56 [DEBUG] [id] : user04
-21-02-24 12:49:56 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=90, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 12:49:56 [DEBUG] [Running Time] : 19ms
-
-21-02-24 12:49:56 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 12:49:56 [DEBUG] [parameter] : [508]
-21-02-24 12:49:56 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:56 [DEBUG] [id] : user04
-21-02-24 12:49:56 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 12:49:56 [DEBUG] [Running Time] : 2ms
-
-21-02-24 12:49:56 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:49:56 [DEBUG] [parameter] : [508]
-21-02-24 12:49:56 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:49:56 [DEBUG] [id] : user04
-21-02-24 12:49:56 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=0], Reply [replyNo=6, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=1], Reply [replyNo=5, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=1]]
-21-02-24 12:49:56 [DEBUG] [Running Time] : 10ms
-
-21-02-24 12:50:27 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 12:50:27 [DEBUG] [parameter] : [1, 1]
-21-02-24 12:50:27 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:27 [DEBUG] [id] : user04
-21-02-24 12:50:27 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 12:50:27 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:50:27 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 12:50:27 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 12:50:27 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:27 [DEBUG] [id] : user04
-21-02-24 12:50:27 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=90, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 12:50:27 [DEBUG] [Running Time] : 3ms
-
-21-02-24 12:50:27 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 12:50:27 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=90, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 12:50:27 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:27 [DEBUG] [id] : user04
-21-02-24 12:50:27 [DEBUG] [Return Value] : []
-21-02-24 12:50:27 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:50:28 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 12:50:28 [DEBUG] [parameter] : [508, 1]
-21-02-24 12:50:28 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:28 [DEBUG] [id] : user04
-21-02-24 12:50:28 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=91, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 12:50:28 [DEBUG] [Running Time] : 15ms
-
-21-02-24 12:50:28 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 12:50:28 [DEBUG] [parameter] : [508]
-21-02-24 12:50:28 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:28 [DEBUG] [id] : user04
-21-02-24 12:50:28 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 12:50:28 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:50:28 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:50:28 [DEBUG] [parameter] : [508]
-21-02-24 12:50:28 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:28 [DEBUG] [id] : user04
-21-02-24 12:50:28 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=0], Reply [replyNo=6, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=1], Reply [replyNo=5, replyContent=null, replyCreateDate=null, replyModifyDate=null, replyStatus=null, memberId=null, parentBoardNo=0, parentReplyNo=3, replyDepth=1]]
-21-02-24 12:50:28 [DEBUG] [Running Time] : 3ms
-
-21-02-24 12:50:38 [INFO] Root WebApplicationContext: initialization started
-21-02-24 12:50:41 [INFO] Root WebApplicationContext initialized in 2869 ms
-21-02-24 12:50:41 [INFO] Initializing Servlet 'appServlet'
-21-02-24 12:50:45 [INFO] Completed initialization in 3995 ms
-21-02-24 12:50:54 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 12:50:54 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 12:50:57 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 12:50:57 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 12:50:57 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:50:58 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 12:50:58 [DEBUG] [Running Time] : 1561ms
-
-21-02-24 12:51:01 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 12:51:01 [DEBUG] [parameter] : [1, 1]
-21-02-24 12:51:01 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:01 [DEBUG] [id] : user04
-21-02-24 12:51:01 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 12:51:01 [DEBUG] [Running Time] : 4ms
-
-21-02-24 12:51:01 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 12:51:01 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 12:51:01 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:01 [DEBUG] [id] : user04
-21-02-24 12:51:01 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=91, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 12:51:01 [DEBUG] [Running Time] : 10ms
-
-21-02-24 12:51:01 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 12:51:01 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=91, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 12:51:01 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:01 [DEBUG] [id] : user04
-21-02-24 12:51:01 [DEBUG] [Return Value] : []
-21-02-24 12:51:01 [DEBUG] [Running Time] : 94ms
-
-21-02-24 12:51:02 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 12:51:02 [DEBUG] [parameter] : [508, 1]
-21-02-24 12:51:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:02 [DEBUG] [id] : user04
-21-02-24 12:51:02 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=92, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 12:51:02 [DEBUG] [Running Time] : 20ms
-
-21-02-24 12:51:02 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 12:51:02 [DEBUG] [parameter] : [508]
-21-02-24 12:51:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:02 [DEBUG] [id] : user04
-21-02-24 12:51:02 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 12:51:02 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:51:02 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:51:02 [DEBUG] [parameter] : [508]
-21-02-24 12:51:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:02 [DEBUG] [id] : user04
-21-02-24 12:51:35 [INFO] Root WebApplicationContext: initialization started
-21-02-24 12:51:38 [INFO] Root WebApplicationContext initialized in 2654 ms
-21-02-24 12:51:38 [INFO] Initializing Servlet 'appServlet'
-21-02-24 12:51:42 [INFO] Completed initialization in 3675 ms
-21-02-24 12:51:50 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 12:51:50 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 12:51:53 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 12:51:53 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=PASS04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 12:51:53 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:51:58 [DEBUG] 로그인 화면으로 전환됨(debug)
-21-02-24 12:51:58 [INFO] 로그인 화면으로 전환됨(info)
-21-02-24 12:52:00 [DEBUG] [Start] : MemberServiceImpl - loginAction()
-21-02-24 12:52:00 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
-21-02-24 12:52:00 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:00 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
-21-02-24 12:52:00 [DEBUG] [Running Time] : 68ms
-
-21-02-24 12:52:02 [DEBUG] [Start] : BoardServiceImpl - getPageInfo()
-21-02-24 12:52:02 [DEBUG] [parameter] : [1, 1]
-21-02-24 12:52:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:02 [DEBUG] [id] : user04
-21-02-24 12:52:02 [DEBUG] [Return Value] : PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]
-21-02-24 12:52:02 [DEBUG] [Running Time] : 2ms
-
-21-02-24 12:52:02 [DEBUG] [Start] : BoardServiceImpl - selectList()
-21-02-24 12:52:02 [DEBUG] [parameter] : [PageInfo [currentPage=1, listCount=507, limit=10, pageSize=10, maxPage=51, startPage=1, endPage=10, boardType=1]]
-21-02-24 12:52:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:02 [DEBUG] [id] : user04
-21-02-24 12:52:02 [DEBUG] [Return Value] : [Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=92, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]
-21-02-24 12:52:02 [DEBUG] [Running Time] : 11ms
-
-21-02-24 12:52:02 [DEBUG] [Start] : BoardServiceImpl - selectThumbnailList()
-21-02-24 12:52:02 [DEBUG] [parameter] : [[Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=92, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=506, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 17:07:31.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=505, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:06:03.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=504, boardTitle=파일업로드 테스트, boardContent=null, memberId=user04, readCount=0, categoryNm=게임, boardCreateDt=2021-02-09 17:05:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=503, boardTitle=test, boardContent=null, memberId=user04, readCount=1, categoryNm=기타, boardCreateDt=2021-02-09 14:46:19.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=502, boardTitle=개행문자 test, boardContent=null, memberId=user04, readCount=1, categoryNm=운동, boardCreateDt=2021-02-09 12:36:01.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=501, boardTitle=test, boardContent=null, memberId=user04, readCount=2, categoryNm=게임, boardCreateDt=2021-02-09 12:21:34.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=500, boardTitle=500번째 게시글, boardContent=null, memberId=admin, readCount=6, categoryNm=요리, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=499, boardTitle=499번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판], Board [boardNo=498, boardTitle=498번째 게시글, boardContent=null, memberId=admin, readCount=0, categoryNm=영화, boardCreateDt=2021-02-08 10:39:12.0, boardModifyDt=null, boardStatus=null, boardCd=0, boardNm=자유게시판]]]
-21-02-24 12:52:02 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:02 [DEBUG] [id] : user04
-21-02-24 12:52:02 [DEBUG] [Return Value] : []
-21-02-24 12:52:02 [DEBUG] [Running Time] : 81ms
-
-21-02-24 12:52:03 [DEBUG] [Start] : BoardServiceImpl - selectBoard()
-21-02-24 12:52:03 [DEBUG] [parameter] : [508, 1]
-21-02-24 12:52:03 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:03 [DEBUG] [id] : user04
-21-02-24 12:52:03 [DEBUG] [Return Value] : Board [boardNo=508, boardTitle=파일업로드 테스트, boardContent=파일업로드 테스트, memberId=user04, readCount=93, categoryNm=게임, boardCreateDt=2021-02-09 17:35:54.0, boardModifyDt=2021-02-15 10:24:14.0, boardStatus=null, boardCd=1, boardNm=자유게시판]
-21-02-24 12:52:03 [DEBUG] [Running Time] : 21ms
-
-21-02-24 12:52:03 [DEBUG] [Start] : BoardServiceImpl - selectAttachmentList()
-21-02-24 12:52:03 [DEBUG] [parameter] : [508]
-21-02-24 12:52:03 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:03 [DEBUG] [id] : user04
-21-02-24 12:52:03 [DEBUG] [Return Value] : [Attachment [fileNo=21, filePath=/resources/uploadImages, fileName=210215102207_82476.png, fileLevel=2, parentBoardNo=508]]
-21-02-24 12:52:03 [DEBUG] [Running Time] : 1ms
-
-21-02-24 12:52:03 [DEBUG] [Start] : ReplyServiceImpl - selectReplyList()
-21-02-24 12:52:03 [DEBUG] [parameter] : [508]
-21-02-24 12:52:03 [DEBUG] [ip] : 127.0.0.1
-21-02-24 12:52:03 [DEBUG] [id] : user04
-21-02-24 12:52:03 [DEBUG] [Return Value] : [Reply [replyNo=4, replyContent=댓글, replyCreateDate=2021-02-24 11:10:13.0, replyModifyDate=2021-02-24 11:10:13.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=4, replyDepth=0], Reply [replyNo=3, replyContent=댓글 테스트, replyCreateDate=2021-02-24 10:34:30.0, replyModifyDate=2021-02-24 10:34:30.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=0], Reply [replyNo=6, replyContent=답글 테스트2, replyCreateDate=2021-02-24 12:21:04.0, replyModifyDate=2021-02-24 12:21:04.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=1], Reply [replyNo=5, replyContent=답글 테스트, replyCreateDate=2021-02-24 12:20:54.0, replyModifyDate=2021-02-24 12:20:54.0, replyStatus=Y, memberId=user04, parentBoardNo=508, parentReplyNo=3, replyDepth=1]]
-21-02-24 12:52:03 [DEBUG] [Running Time] : 8ms
-
-21-02-24 13:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 13:00:00 [DEBUG] [parameter] : []
-21-02-24 13:00:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 13:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 13:00:00 [DEBUG] [Running Time] : 3ms
-
-21-02-24 14:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
-21-02-24 14:00:00 [DEBUG] [parameter] : []
-21-02-24 14:00:00 [DEBUG] [ip] : Spring Scheduler
-21-02-24 14:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
-21-02-24 14:00:00 [DEBUG] [Running Time] : 2ms
+21-02-25 10:08:56 [INFO] Root WebApplicationContext: initialization started
+21-02-25 10:08:59 [INFO] Root WebApplicationContext initialized in 2968 ms
+21-02-25 10:08:59 [INFO] Initializing Servlet 'appServlet'
+21-02-25 10:09:04 [INFO] Completed initialization in 4869 ms
+21-02-25 10:09:26 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 10:09:26 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 10:13:26 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 10:13:26 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 10:16:27 [INFO] Root WebApplicationContext: initialization started
+21-02-25 10:16:30 [INFO] Root WebApplicationContext initialized in 2724 ms
+21-02-25 10:16:30 [INFO] Initializing Servlet 'appServlet'
+21-02-25 10:16:34 [INFO] Completed initialization in 4817 ms
+21-02-25 10:16:46 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 10:16:46 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 10:16:48 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 10:16:48 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 10:16:48 [DEBUG] [ip] : 127.0.0.1
+21-02-25 10:16:50 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 10:16:50 [DEBUG] [Running Time] : 1837ms
+
+21-02-25 10:16:51 [INFO] iqt0xkdc연결됨
+21-02-25 11:07:19 [INFO] Root WebApplicationContext: initialization started
+21-02-25 11:07:22 [INFO] Root WebApplicationContext initialized in 2926 ms
+21-02-25 11:07:22 [INFO] Initializing Servlet 'appServlet'
+21-02-25 11:07:27 [INFO] Completed initialization in 4722 ms
+21-02-25 11:07:37 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 11:07:37 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 11:07:40 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 11:07:40 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 11:07:40 [DEBUG] [ip] : 127.0.0.1
+21-02-25 11:07:42 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 11:07:42 [DEBUG] [Running Time] : 1835ms
+
+21-02-25 11:07:42 [INFO] t1h3vevb연결됨
+21-02-25 11:07:50 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"채팅 보내기"}
+21-02-25 11:11:47 [INFO] Root WebApplicationContext: initialization started
+21-02-25 11:11:50 [INFO] Root WebApplicationContext initialized in 2687 ms
+21-02-25 11:11:50 [INFO] Initializing Servlet 'appServlet'
+21-02-25 11:11:55 [INFO] Completed initialization in 4668 ms
+21-02-25 11:12:04 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 11:12:04 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 11:12:08 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 11:12:08 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 11:12:08 [DEBUG] [ip] : 127.0.0.1
+21-02-25 11:12:09 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 11:12:09 [DEBUG] [Running Time] : 1772ms
+
+21-02-25 11:12:10 [INFO] sguakqf5연결됨
+21-02-25 11:12:15 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"테스트"}
+21-02-25 11:43:47 [INFO] Root WebApplicationContext: initialization started
+21-02-25 11:43:50 [INFO] Root WebApplicationContext initialized in 2638 ms
+21-02-25 11:43:50 [INFO] Initializing Servlet 'appServlet'
+21-02-25 11:43:55 [INFO] Completed initialization in 5121 ms
+21-02-25 11:44:18 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 11:44:18 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 11:44:25 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 11:44:25 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 11:44:25 [DEBUG] [ip] : 127.0.0.1
+21-02-25 11:44:27 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 11:44:27 [DEBUG] [Running Time] : 1951ms
+
+21-02-25 11:44:28 [INFO] dk4jqav2연결됨
+21-02-25 11:45:01 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 11:45:01 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 11:45:06 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 11:45:06 [DEBUG] [parameter] : [Member [memberNo=0, memberId=admin, memberPwd=123123, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 11:45:06 [DEBUG] [ip] : 127.0.0.1
+21-02-25 11:45:06 [DEBUG] [Return Value] : Member [memberNo=1, memberId=admin, memberPwd=null, memberName=관리자, memberPhone=010-1234-1234, memberEmail=admin@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,3층, memberInterest=운동, memberEnrollDate=2021-02-04, memberStatus=Y, memberGrade=A]
+21-02-25 11:45:06 [DEBUG] [Running Time] : 68ms
+
+21-02-25 11:45:06 [INFO] xr4fourt연결됨
+21-02-25 11:45:25 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"왼쪽에서 메세지 입력"}
+21-02-25 11:45:25 [INFO] 채팅 작성자 : "user04"
+21-02-25 11:45:25 [INFO] 채팅 내용 : "왼쪽에서 메세지 입력"
+21-02-25 11:45:25 [INFO] user04회원에게 채팅 전달
+21-02-25 11:45:25 [INFO] admin회원에게 채팅 전달
+21-02-25 11:47:56 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"왼쪽에서 메세지 입력"}
+21-02-25 11:47:56 [INFO] 채팅 작성자 : "user04"
+21-02-25 11:47:56 [INFO] 채팅 내용 : "왼쪽에서 메세지 입력"
+21-02-25 11:47:56 [INFO] user04회원에게 채팅 전달
+21-02-25 11:47:56 [INFO] admin회원에게 채팅 전달
+21-02-25 12:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
+21-02-25 12:00:00 [DEBUG] [parameter] : []
+21-02-25 12:00:00 [DEBUG] [ip] : Spring Scheduler
+21-02-25 12:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
+21-02-25 12:00:00 [DEBUG] [Running Time] : 3ms
+
+21-02-25 12:07:14 [INFO] Root WebApplicationContext: initialization started
+21-02-25 12:07:16 [INFO] Root WebApplicationContext initialized in 2602 ms
+21-02-25 12:07:17 [INFO] Initializing Servlet 'appServlet'
+21-02-25 12:07:21 [INFO] Completed initialization in 4655 ms
+21-02-25 12:07:31 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 12:07:31 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 12:07:35 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 12:07:35 [DEBUG] [parameter] : [Member [memberNo=0, memberId=admin, memberPwd=123123, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 12:07:35 [DEBUG] [ip] : 127.0.0.1
+21-02-25 12:07:36 [DEBUG] [Return Value] : Member [memberNo=1, memberId=admin, memberPwd=null, memberName=관리자, memberPhone=010-1234-1234, memberEmail=admin@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,3층, memberInterest=운동, memberEnrollDate=2021-02-04, memberStatus=Y, memberGrade=A]
+21-02-25 12:07:36 [DEBUG] [Running Time] : 1721ms
+
+21-02-25 12:07:37 [INFO] 1jmwbnu2연결됨
+21-02-25 12:07:43 [INFO] 전달받은 내용 : {"memberId":"admin","chat":"테스트"}
+21-02-25 12:07:44 [INFO] 채팅 작성자 : "admin"
+21-02-25 12:07:44 [INFO] 채팅 내용 : "테스트"
+21-02-25 12:07:44 [INFO] admin회원에게 채팅 전달
+21-02-25 12:07:52 [INFO] pinhrihe연결됨
+21-02-25 12:07:57 [INFO] 전달받은 내용 : {"memberId":"admin","chat":"테스트"}
+21-02-25 12:07:57 [INFO] 채팅 작성자 : "admin"
+21-02-25 12:07:57 [INFO] 채팅 내용 : "테스트"
+21-02-25 12:07:57 [INFO] admin회원에게 채팅 전달
+21-02-25 12:07:57 [ERROR] Closing session due to exception for WebSocketServerSockJsSession[id=pinhrihe]
+java.lang.IllegalStateException: Cannot send a message when session is closed
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.sendMessage(AbstractSockJsSession.java:168)
+	at com.kh.spring.common.websocket.ChattingWebsocketHandler.handleTextMessage(ChattingWebsocketHandler.java:107)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:387)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.handleMessage(WebSocketServerSockJsSession.java:195)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.handleTextMessage(SockJsWebSocketHandler.java:93)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:114)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:85)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:82)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:414)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:129)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:515)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:301)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1634)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+21-02-25 12:08:04 [INFO] zxrnp4qj연결됨
+21-02-25 12:08:08 [INFO] 전달받은 내용 : {"memberId":"admin","chat":"테스트"}
+21-02-25 12:08:08 [INFO] 채팅 작성자 : "admin"
+21-02-25 12:08:08 [INFO] 채팅 내용 : "테스트"
+21-02-25 12:08:08 [INFO] admin회원에게 채팅 전달
+21-02-25 12:08:08 [ERROR] Closing session due to exception for WebSocketServerSockJsSession[id=zxrnp4qj]
+java.lang.IllegalStateException: Cannot send a message when session is closed
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.sendMessage(AbstractSockJsSession.java:168)
+	at com.kh.spring.common.websocket.ChattingWebsocketHandler.handleTextMessage(ChattingWebsocketHandler.java:107)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:387)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.handleMessage(WebSocketServerSockJsSession.java:195)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.handleTextMessage(SockJsWebSocketHandler.java:93)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:114)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:85)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:82)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:414)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:129)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:515)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:301)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1634)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+21-02-25 12:08:35 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 12:08:35 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 12:08:38 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 12:08:38 [DEBUG] [parameter] : [Member [memberNo=0, memberId=admin, memberPwd=123123, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 12:08:38 [DEBUG] [ip] : 127.0.0.1
+21-02-25 12:08:38 [DEBUG] [Return Value] : Member [memberNo=1, memberId=admin, memberPwd=null, memberName=관리자, memberPhone=010-1234-1234, memberEmail=admin@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,3층, memberInterest=운동, memberEnrollDate=2021-02-04, memberStatus=Y, memberGrade=A]
+21-02-25 12:08:38 [DEBUG] [Running Time] : 72ms
+
+21-02-25 12:08:38 [INFO] cbi12hgd연결됨
+21-02-25 12:08:44 [INFO] 전달받은 내용 : {"memberId":"admin","chat":"ㅎ"}
+21-02-25 12:08:44 [INFO] 채팅 작성자 : "admin"
+21-02-25 12:08:44 [INFO] 채팅 내용 : "ㅎ"
+21-02-25 12:08:44 [INFO] admin회원에게 채팅 전달
+21-02-25 12:08:44 [ERROR] Closing session due to exception for WebSocketServerSockJsSession[id=cbi12hgd]
+java.lang.IllegalStateException: Cannot send a message when session is closed
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.sendMessage(AbstractSockJsSession.java:168)
+	at com.kh.spring.common.websocket.ChattingWebsocketHandler.handleTextMessage(ChattingWebsocketHandler.java:107)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:387)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.handleMessage(WebSocketServerSockJsSession.java:195)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.handleTextMessage(SockJsWebSocketHandler.java:93)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:114)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:85)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:82)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:414)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:129)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:515)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:301)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1634)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+21-02-25 12:09:43 [INFO] Root WebApplicationContext: initialization started
+21-02-25 12:09:46 [INFO] Root WebApplicationContext initialized in 2890 ms
+21-02-25 12:09:46 [INFO] Initializing Servlet 'appServlet'
+21-02-25 12:09:51 [INFO] Completed initialization in 4924 ms
+21-02-25 12:10:01 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 12:10:01 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 12:10:08 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 12:10:08 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 12:10:08 [DEBUG] [ip] : 127.0.0.1
+21-02-25 12:10:10 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 12:10:10 [DEBUG] [Running Time] : 1775ms
+
+21-02-25 12:10:11 [INFO] wvyp3ufb연결됨
+21-02-25 12:10:14 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"?"}
+21-02-25 12:10:14 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:10:14 [INFO] 채팅 내용 : "?"
+21-02-25 12:10:14 [INFO] user04회원에게 채팅 전달
+21-02-25 12:18:03 [INFO] Root WebApplicationContext: initialization started
+21-02-25 12:18:05 [INFO] Root WebApplicationContext initialized in 2902 ms
+21-02-25 12:18:06 [INFO] Initializing Servlet 'appServlet'
+21-02-25 12:18:11 [INFO] Completed initialization in 5026 ms
+21-02-25 12:19:00 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 12:19:00 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 12:19:02 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 12:19:02 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 12:19:02 [DEBUG] [ip] : 127.0.0.1
+21-02-25 12:19:04 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 12:19:04 [DEBUG] [Running Time] : 1835ms
+
+21-02-25 12:19:05 [INFO] ohmruxea연결됨
+21-02-25 12:19:07 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"test"}
+21-02-25 12:19:08 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:19:08 [INFO] 채팅 내용 : "test"
+21-02-25 12:19:08 [INFO] user04회원에게 채팅 전달
+21-02-25 12:19:20 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"enter"}
+21-02-25 12:19:20 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:19:20 [INFO] 채팅 내용 : "enter"
+21-02-25 12:19:20 [INFO] user04회원에게 채팅 전달
+21-02-25 12:21:38 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"session"}
+21-02-25 12:21:38 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:21:38 [INFO] 채팅 내용 : "session"
+21-02-25 12:21:38 [INFO] user04회원에게 채팅 전달
+21-02-25 12:27:09 [INFO] Root WebApplicationContext: initialization started
+21-02-25 12:27:12 [INFO] Root WebApplicationContext initialized in 2606 ms
+21-02-25 12:27:12 [INFO] Initializing Servlet 'appServlet'
+21-02-25 12:27:17 [INFO] Completed initialization in 4737 ms
+21-02-25 12:27:30 [DEBUG] 로그인 화면으로 전환됨(debug)
+21-02-25 12:27:30 [INFO] 로그인 화면으로 전환됨(info)
+21-02-25 12:27:33 [DEBUG] [Start] : MemberServiceImpl - loginAction()
+21-02-25 12:27:33 [DEBUG] [parameter] : [Member [memberNo=0, memberId=user04, memberPwd=pass04, memberName=null, memberPhone=null, memberEmail=null, memberAddress=null, memberInterest=null, memberEnrollDate=null, memberStatus=null, memberGrade=null]]
+21-02-25 12:27:33 [DEBUG] [ip] : 127.0.0.1
+21-02-25 12:27:34 [DEBUG] [Return Value] : Member [memberNo=6, memberId=user04, memberPwd=null, memberName=유저사, memberPhone=010-1234-1234, memberEmail=user04@naver.com, memberAddress=04540,서울특별시 중구 남대문로 120,4층, memberInterest=영화,게임, memberEnrollDate=2021-02-08, memberStatus=Y, memberGrade=G]
+21-02-25 12:27:34 [DEBUG] [Running Time] : 1704ms
+
+21-02-25 12:27:35 [INFO] dqcps5wx연결됨
+21-02-25 12:27:39 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"enter\n"}
+21-02-25 12:27:39 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:27:39 [INFO] 채팅 내용 : "enter\n"
+21-02-25 12:27:39 [INFO] user04회원에게 채팅 전달
+21-02-25 12:27:49 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"shift enter\nㅎㅎ\n"}
+21-02-25 12:27:49 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:27:49 [INFO] 채팅 내용 : "shift enter\nㅎㅎ\n"
+21-02-25 12:27:49 [INFO] user04회원에게 채팅 전달
+21-02-25 12:27:55 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"냠냠굿\n"}
+21-02-25 12:27:55 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:27:55 [INFO] 채팅 내용 : "냠냠굿\n"
+21-02-25 12:27:55 [INFO] user04회원에게 채팅 전달
+21-02-25 12:35:57 [INFO] 전달받은 내용 : {"memberId":"user04","chat":"?\n"}
+21-02-25 12:35:57 [INFO] 채팅 작성자 : "user04"
+21-02-25 12:35:57 [INFO] 채팅 내용 : "?\n"
+21-02-25 12:35:57 [INFO] user04회원에게 채팅 전달
+21-02-25 13:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
+21-02-25 13:00:00 [DEBUG] [parameter] : []
+21-02-25 13:00:00 [DEBUG] [ip] : Spring Scheduler
+21-02-25 13:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
+21-02-25 13:00:00 [DEBUG] [Running Time] : 4ms
+
+21-02-25 14:00:00 [DEBUG] [Start] : BoardServiceImpl - selectDBFileList()
+21-02-25 14:00:00 [DEBUG] [parameter] : []
+21-02-25 14:00:00 [DEBUG] [ip] : Spring Scheduler
+21-02-25 14:00:00 [DEBUG] [Return Value] : [210217124846_27245.png, 210217124730_19895.png, 210217124737_57615.png, 210217124759_84410.png, 210217101036_85877.png, 210215102207_82476.png, 210217124811_49485.png, 210217124821_54042.png, 210217141629_46372.png, 210217141525_55319.png, 210217141534_85797.png, 210217141544_01743.png, 210217141553_21327.png, 210217141601_43187.png, 210217142223_96386.png, 210217142213_00367.png, 210217142223_37351.png, 210217174607_09938.png, 210217174359_33428.png, 210217174410_38840.png, 210217174710_87946.png, 210217174700_86107.png, 210217174708_26776.png, 210218103454_27168.PNG]
+21-02-25 14:00:00 [DEBUG] [Running Time] : 3ms
 
